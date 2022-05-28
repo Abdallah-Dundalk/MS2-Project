@@ -42,7 +42,12 @@
     overflow: hidden;   
     position: relative;
     text-align: center;
+}
 
+.outer-ring:hover {
+    transform: rotate(90deg);
+    transition-duration: 500ms;
+    transition-property: all;
 }
 
 .middle-ring {
@@ -55,6 +60,12 @@
     text-align: center;
     position: relative;
     bottom:60px;
+}
+
+.middle-ring:hover {
+    transform: rotate(90deg);
+    transition-duration: 500ms;
+    transition-property: all;
 }
 
 .center-ring {
@@ -110,3 +121,4 @@
     display: inline-block;
     margin: 30px 9px 30px;
 }
+
