@@ -1,0 +1,112 @@
+#score {
+    background: red;
+    height: 30px;
+    width: 20%;
+    float: left;
+    margin: 30px 0 30px 10%;
+}
+
+#timer {
+    background: blue;
+    height: 30px;
+    width: 20%;
+    float: right;
+    margin: 30px 10% 30px 0;
+}
+
+#game-area {
+    background: darkgray;
+    width: 80%;
+    height: 300px;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    clear: both;
+}
+
+.dial {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 30px 9px 30px;
+    display: inline-block;
+}
+
+.outer-ring {
+    background: #efd3d7;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;   
+    position: relative;
+    text-align: center;
+
+}
+
+.middle-ring {
+    background: #cbc0d3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px auto;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    bottom:60px;
+}
+
+.center-ring {
+    background: #8e9aaf;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px auto;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+
+    
+}
+
+.outer-ring i {
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-left: -1px;
+    bottom: 3px;
+    font-size: small;
+}
+
+.middle-ring i {
+    color: black;
+    margin-left: -1px;
+    position: relative;
+    bottom: 3px;
+    font-size: small;
+}
+
+.center-ring i {
+    color: black;
+    text-align: center;
+    margin-left: -1px;
+    position: relative;
+    top: 1px;
+    font-size: small;
+}
+
+.middle-row {
+    position: relative;
+    bottom: 80px;
+    display: inline-block;
+    margin: 15px 9px 30px;
+}
+
+.bottom-row {
+    position: relative;
+    bottom: 200px;
+    display: inline-block;
+    margin: 30px 9px 30px;
+}
