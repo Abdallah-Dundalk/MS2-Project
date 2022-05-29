@@ -87,7 +87,7 @@ function rotateRingTopLeft () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -104,7 +104,7 @@ function rotateRingMiddleLeft () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -121,7 +121,7 @@ function rotateRingBottomLeft () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -164,7 +164,7 @@ function rotateRingTopMiddle () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -181,7 +181,7 @@ function rotateRingCenter () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -198,7 +198,7 @@ function rotateRingBottomMiddle () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -240,7 +240,7 @@ function rotateRingTopRight () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -257,7 +257,7 @@ function rotateRingMiddleRight () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -274,7 +274,7 @@ function rotateRingBottomRight () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -318,7 +318,7 @@ function rotateRingTopLeftInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -335,7 +335,7 @@ function rotateRingMiddleLeftInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -352,7 +352,7 @@ function rotateRingBottomLeftInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -395,7 +395,7 @@ function rotateRingTopMiddleInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -412,7 +412,7 @@ function rotateRingCenterInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -429,7 +429,7 @@ function rotateRingBottomMiddleInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -471,7 +471,7 @@ function rotateRingTopRightInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -488,7 +488,7 @@ function rotateRingMiddleRightInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
@@ -505,7 +505,7 @@ function rotateRingBottomRightInnerDial () {
     } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
     } else if (rotateValue === 0) {
-        topLeftDial.style.transform = "rotate(360deg)";
+        topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
     }
