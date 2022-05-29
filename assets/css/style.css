@@ -45,7 +45,7 @@
 }
 
 .outer-ring:hover {
-    transform: rotate(90deg);
+    
     transition-duration: 500ms;
     transition-property: all;
 }
@@ -63,7 +63,7 @@
 }
 
 .middle-ring:hover {
-    transform: rotate(90deg);
+    
     transition-duration: 500ms;
     transition-property: all;
 }

@@ -15,8 +15,8 @@
   
     <div id="game-area">
         <!-- top row of dials -->
-        <div id="top-row-left-dial" class="dial">
-            <div class="outer-ring">
+        <div class="dial">
+            <div data-type="top-row-left-dial"  id="top-row-left-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -29,8 +29,8 @@
             </div>
         </div>
 
-        <div id="top-row-center-dial" class="dial">
-            <div class="outer-ring">
+        <div class="dial">
+            <div id="top-row-middle-dial" data-type="top-row-middle-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -43,8 +43,8 @@
             </div>
         </div>
 
-        <div id="top-row-right-dial" class="dial">
-            <div class="outer-ring">
+        <div class="dial">
+            <div id="top-row-right-dial" data-type="top-row-right-dial"  class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -58,8 +58,8 @@
         </div>
 
         <!-- Middle row of dials -->
-        <div id="middle-row-left-dial" class="middle-row"  class="dial">
-            <div class="outer-ring">
+        <div class="middle-row"  class="dial">
+            <div id="middle-row-left-dial" data-type="middle-row-left-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -72,8 +72,8 @@
             </div>
         </div>
 
-        <div id="middle-row-center-dial" class="middle-row" class="dial">
-            <div class="outer-ring">
+        <div class="middle-row" class="dial">
+            <div id="middle-row-center-dial" data-type="middle-row-center-dial"  class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -86,8 +86,8 @@
             </div>
         </div>
 
-        <div id="middle-row-right-dial" class="middle-row" class="dial">
-            <div class="outer-ring">
+        <div class="middle-row" class="dial">
+            <div id="middle-row-right-dial" data-type="middle-row-right-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -101,8 +101,8 @@
         </div>
 
         <!-- Bottom row of dials -->
-        <div id="bottom-row-left-dial" class="bottom-row"  class="dial">
-            <div class="outer-ring">
+        <div class="bottom-row"  class="dial">
+            <div id="bottom-row-left-dial" data-type="bottom-row-left-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -115,8 +115,8 @@
             </div>
         </div>
 
-        <div id="bottom-row-center-dial" class="bottom-row" class="dial">
-            <div class="outer-ring">
+        <div class="bottom-row" class="dial">
+            <div id="bottom-row-center-dial" data-type="bottom-row-center-dial"  class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -129,8 +129,8 @@
             </div>
         </div>
 
-        <div id="bottom-row-right-dial" class="bottom-row" class="dial">
-            <div class="outer-ring">
+        <div class="bottom-row" class="dial">
+            <div id="bottom-row-right-dial" data-type="bottom-row-right-dial" class="outer-ring">
                 <i class="fas fa-angle-down"></i>
             </div>
 
@@ -145,7 +145,7 @@
 
 
     </div>
-    <div id="counter-clockwise-control">
+    <div id="out-ring-control">
 
     </div>
 
@@ -153,9 +153,19 @@
 
     </div>
 
-    <div id="clockwise-control">
+    <div id="middle-ring-control">
 
     </div>
+
+    <span id="rotate-value-top-left">0</span>
+    <span id="rotate-value-middle-left">0</span>
+    <span id="rotate-value-bottom-left">0</span>
+    <span id="rotate-value-top-middle">0</span>
+    <span id="rotate-value-center">0</span>
+    <span id="rotate-value-bottom-center">0</span>
+    <span id="rotate-value-top-right">0</span>
+    <span id="rotate-value-middle-right">0</span>
+    <span id="rotate-value-bottom-right">0</span>
 
     <script src="assets/js/script.js"></script>
 </body>
