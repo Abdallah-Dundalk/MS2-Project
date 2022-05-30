@@ -33,8 +33,11 @@ addEventListener("DOMContentLoaded", function() {
             } 
     })
     }
+    
 
 })
+
+
 
 addEventListener("DOMContentLoaded", function() {
     let middleRings = document.getElementsByClassName("middle-ring");
@@ -73,6 +76,29 @@ if (this.getAttribute("data-type")==="top-row-left-inner-dial") {
     }
 
 })
+
+addEventListener("DOMContentLoaded", function() {
+        let randomNum1 = Math.floor(Math.random()*3) + 1;
+        let randomNum2 = Math.floor(Math.random()*3) + 1;
+        let randomNum3 = Math.floor(Math.random()*3) + 1;
+        let randomNum4 = Math.floor(Math.random()*3) + 1;
+        let randomNum5 = Math.floor(Math.random()*3) + 1;
+        let randomNum6 = Math.floor(Math.random()*3) + 1;
+        let randomNum7 = Math.floor(Math.random()*3) + 1;
+        let randomNum8 = Math.floor(Math.random()*3) + 1;
+        let randomNum9 = Math.floor(Math.random()*3) + 1;
+        document.getElementById("random-num-top-left").innerText = randomNum1;
+        document.getElementById("random-num-middle-left").textContent = randomNum2;
+        document.getElementById("random-num-bottom-left").textContent = randomNum3;
+        document.getElementById("random-num-top-middle").textContent = randomNum4;
+        document.getElementById("random-num-center").textContent = randomNum5;
+        document.getElementById("random-num-bottom-center").textContent = randomNum6;
+        document.getElementById("random-num-top-right").textContent = randomNum7;
+        document.getElementById("random-num-middle-right").textContent = randomNum8;
+        document.getElementById("random-num-bottom-right").textContent = randomNum9;
+        
+})
+
 
 
 
@@ -535,3 +561,4 @@ function incrementClicksBottomRightInnerDial () {
     } else (document.getElementById("rotate-value-bottom-right-inner-dial").innerText = 0)
     
 }
+
