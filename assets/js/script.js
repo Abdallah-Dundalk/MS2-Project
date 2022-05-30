@@ -92,13 +92,24 @@ addEventListener("DOMContentLoaded", function() {
         document.getElementById("random-num-bottom-left").textContent = randomNum3;
         document.getElementById("random-num-top-middle").textContent = randomNum4;
         document.getElementById("random-num-center").textContent = randomNum5;
-        document.getElementById("random-num-bottom-center").textContent = randomNum6;
+        document.getElementById("random-num-bottom-middle").textContent = randomNum6;
         document.getElementById("random-num-top-right").textContent = randomNum7;
         document.getElementById("random-num-middle-right").textContent = randomNum8;
         document.getElementById("random-num-bottom-right").textContent = randomNum9;
         
 })
 
+addEventListener("DOMContentLoaded", function() {
+    rotateCenterDialTopLeft ();
+    rotateCenterDialTopMiddle ();
+    rotateCenterDialTopRight ();
+    rotateCenterDialMiddleLeft ();
+    rotateCenterDialMiddle ();
+    rotateCenterDialMiddleRight ();
+    rotateCenterDialBottomLeft ();
+    rotateCenterDialBottomMiddle ();
+    rotateCenterDialBottomRight ();
+})
 
 
 
@@ -562,3 +573,156 @@ function incrementClicksBottomRightInnerDial () {
     
 }
 
+
+function rotateCenterDialTopLeft () {
+    let rotateValue = parseInt(document.getElementById("random-num-top-left").innerText); 
+    let topLeftDial = document.getElementById("top-left-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialTopMiddle () {
+    let rotateValue = parseInt(document.getElementById("random-num-top-middle").innerText); 
+    let topLeftDial = document.getElementById("top-middle-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialTopRight () {
+    let rotateValue = parseInt(document.getElementById("random-num-top-right").innerText); 
+    let topLeftDial = document.getElementById("top-right-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialMiddleLeft () {
+    let rotateValue = parseInt(document.getElementById("random-num-middle-left").innerText); 
+    let topLeftDial = document.getElementById("middle-left-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialMiddle () {
+    let rotateValue = parseInt(document.getElementById("random-num-center").innerText); 
+    let topLeftDial = document.getElementById("center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialMiddleRight () {
+    let rotateValue = parseInt(document.getElementById("random-num-middle-right").innerText); 
+    let topLeftDial = document.getElementById("middle-right-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialBottomLeft () {
+    let rotateValue = parseInt(document.getElementById("random-num-bottom-left").innerText); 
+    let topLeftDial = document.getElementById("bottom-left-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialBottomMiddle () {
+    let rotateValue = parseInt(document.getElementById("random-num-bottom-middle").innerText); 
+    let topLeftDial = document.getElementById("bottom-middle-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
+
+function rotateCenterDialBottomRight () {
+    let rotateValue = parseInt(document.getElementById("random-num-bottom-right").innerText); 
+    let topLeftDial = document.getElementById("bottom-right-center-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
