@@ -5,30 +5,39 @@ addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type")==="top-row-left-dial") {
                 incrementClicksTopLeft ();
                 rotateRingTopLeft ();
+                matchingValuesTopLeft ()
             } else if (this.getAttribute("data-type")==="middle-row-left-dial") {
                 incrementClicksMiddleLeft ();
                 rotateRingMiddleLeft ();
+                matchingValuesMiddleLeft ()
             } else if (this.getAttribute("data-type")==="bottom-row-left-dial") {
                 incrementClicksBottomLeft ();
                 rotateRingBottomLeft ();
+                matchingValuesBottomLeft ()
             } else if (this.getAttribute("data-type")==="top-row-middle-dial") {
                 incrementClicksTopMiddle ();
                 rotateRingTopMiddle ();
+                matchingValuesTopMiddle ()
             }  else if (this.getAttribute("data-type")==="middle-row-center-dial") {
                 incrementClicksCenter ();
                 rotateRingCenter ();
+                matchingValuesCenter ()
             } else if (this.getAttribute("data-type")==="bottom-row-center-dial") {
                 incrementClicksBottomMiddle ();
                 rotateRingBottomMiddle ();
+                matchingValuesBottomMiddle ()
             } else if (this.getAttribute("data-type")==="top-row-right-dial") {
                 incrementClicksTopRight ();
                 rotateRingTopRight ();
+                matchingValuesTopRight ()
             }  else if (this.getAttribute("data-type")==="middle-row-right-dial") {
                 incrementClicksMiddleRight ();
                 rotateRingMiddleRight ();
+                matchingValuesMiddleRight ()
             } else if (this.getAttribute("data-type")==="bottom-row-right-dial") {
                 incrementClicksBottomRight ();
                 rotateRingBottomRight ();
+                matchingValuesBottomRight ()
             //break
             } 
     })
@@ -46,30 +55,39 @@ addEventListener("DOMContentLoaded", function() {
 if (this.getAttribute("data-type")==="top-row-left-inner-dial") {
                 incrementClicksTopLeftInnerDial ();
                 rotateRingTopLeftInnerDial ();
+                matchingValuesTopLeft ()
             } else if (this.getAttribute("data-type")==="middle-row-left-inner-dial") {
                 incrementClicksMiddleLeftInnerDial ();
                 rotateRingMiddleLeftInnerDial ();
+                matchingValuesMiddleLeft ()
             } else if (this.getAttribute("data-type")==="bottom-row-left-inner-dial") {
                 incrementClicksBottomLeftInnerDial ();
                 rotateRingBottomLeftInnerDial ();
+                matchingValuesBottomLeft ()
             } else if (this.getAttribute("data-type")==="top-row-middle-inner-dial") {
                 incrementClicksTopMiddleInnerDial ();
                 rotateRingTopMiddleInnerDial ();
+                matchingValuesTopMiddle ()
             }  else if (this.getAttribute("data-type")==="middle-row-center-inner-dial") {
                 incrementClicksCenterInnerDial ();
                 rotateRingCenterInnerDial ();
+                matchingValuesCenter ()
             } else if (this.getAttribute("data-type")==="bottom-row-center-inner-dial") {
                 incrementClicksBottomMiddleInnerDial ();
                 rotateRingBottomMiddleInnerDial ();
+                matchingValuesBottomMiddle ()
             } else if (this.getAttribute("data-type")==="top-row-right-inner-dial") {
                 incrementClicksTopRightInnerDial ();
                 rotateRingTopRightInnerDial ();
+                matchingValuesTopRight ()
             }  else if (this.getAttribute("data-type")==="middle-row-right-inner-dial") {
                 incrementClicksMiddleRightInnerDial ();
                 rotateRingMiddleRightInnerDial ();
+                matchingValuesMiddleRight ()
             } else if (this.getAttribute("data-type")==="bottom-row-right-inner-dial") {
                 incrementClicksBottomRightInnerDial ();
                 rotateRingBottomRightInnerDial ();
+                matchingValuesBottomRight ()
             }
 
     })
@@ -96,7 +114,6 @@ addEventListener("DOMContentLoaded", function() {
         document.getElementById("random-num-top-right").textContent = randomNum7;
         document.getElementById("random-num-middle-right").textContent = randomNum8;
         document.getElementById("random-num-bottom-right").textContent = randomNum9;
-        
 })
 
 addEventListener("DOMContentLoaded", function() {
@@ -725,4 +742,157 @@ function rotateCenterDialBottomRight () {
         console.log("fail");
     }
     
+}
+
+function matchingValuesTopLeft () {
+    let num1 = parseInt(document.getElementById("rotate-value-top-left").innerText);
+    let num2 = parseInt(document.getElementById("random-num-top-left").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText);
+    let centerDial = document.getElementById("top-left-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesTopMiddle () {
+    let num1 = parseInt(document.getElementById("rotate-value-top-middle").innerText);
+    let num2 = parseInt(document.getElementById("random-num-top-middle").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-top-middle-inner-dial").innerText);
+    let centerDial = document.getElementById("top-middle-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesTopRight () {
+    let num1 = parseInt(document.getElementById("rotate-value-top-right").innerText);
+    let num2 = parseInt(document.getElementById("random-num-top-right").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-top-right-inner-dial").innerText);
+    let centerDial = document.getElementById("top-right-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesMiddleLeft () {
+    let num1 = parseInt(document.getElementById("rotate-value-middle-left").innerText);
+    let num2 = parseInt(document.getElementById("random-num-middle-left").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-middle-left-inner-dial").innerText);
+    let centerDial = document.getElementById("middle-left-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesCenter () {
+    let num1 = parseInt(document.getElementById("rotate-value-center").innerText);
+    let num2 = parseInt(document.getElementById("random-num-center").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-center-inner-dial").innerText);
+    let centerDial = document.getElementById("center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesMiddleRight () {
+    let num1 = parseInt(document.getElementById("rotate-value-middle-right").innerText);
+    let num2 = parseInt(document.getElementById("random-num-middle-right").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-middle-right-inner-dial").innerText);
+    let centerDial = document.getElementById("middle-right-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesBottomLeft () {
+    let num1 = parseInt(document.getElementById("rotate-value-bottom-left").innerText);
+    let num2 = parseInt(document.getElementById("random-num-bottom-left").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-bottom-left-inner-dial").innerText);
+    let centerDial = document.getElementById("bottom-left-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesBottomMiddle () {
+    let num1 = parseInt(document.getElementById("rotate-value-bottom-center").innerText);
+    let num2 = parseInt(document.getElementById("random-num-bottom-middle").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-bottom-center-inner-dial").innerText);
+    let centerDial = document.getElementById("bottom-middle-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
+}
+
+function matchingValuesBottomRight () {
+    let num1 = parseInt(document.getElementById("rotate-value-bottom-right").innerText);
+    let num2 = parseInt(document.getElementById("random-num-bottom-right").innerText);
+    let num3 = parseInt(document.getElementById("rotate-value-bottom-right-inner-dial").innerText);
+    let centerDial = document.getElementById("bottom-right-center-dial")
+
+    if (num1 !== num2 && num3 !== num2) {
+        centerDial.style.background = "red";
+    } else if (num1 == num2 && num3 == num2) {
+        centerDial.style.background = "green"
+    } else if (num1 == num2 && num3 !== num2) {
+        centerDial.style.background = "green"
+    } else if (num3 == num2 && num1 !== num2) {
+    centerDial.style.background = "green"
+}  
 }
