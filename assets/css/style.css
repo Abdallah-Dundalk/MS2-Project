@@ -122,3 +122,20 @@
     margin: 30px 9px 30px;
 }
 
+#toggle-button {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    margin-left: 10%;
+    float: left;
+    color: black;
+    font-size: medium;
+}
+
+#inner-dial-control {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    margin-right: 10%;
+    float: right;
+}

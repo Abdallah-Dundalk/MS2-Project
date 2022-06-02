@@ -137,7 +137,12 @@ addEventListener("DOMContentLoaded", function() {
     rotateCenterDialBottomRight ();
 })
 
-
+// addEventListener("DOMContentLoaded", function() {
+//     let toggleButton = document.getElementById("toggle-button")
+//     addEventListener.toggleButton("click", function() {
+//         toggleButton ()
+//     })
+// })
 
 // Left Column
 function rotateRingTopLeft () {
@@ -374,13 +379,15 @@ function incrementClicksBottomRight () {
 function rotateRingTopLeftInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText); 
     let topLeftDial = document.getElementById("top-row-left-inner-dial");
-    if (rotateValue === 1) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (rotateValue === 1 && toggleButtonText.innerText == "Activate Blue") {
         topLeftDial.style.transform = "rotate(90deg)";
-    } else if (rotateValue === 2) {
+    } else if (rotateValue === 2 && toggleButtonText.innerText == "Activate Blue") {
         topLeftDial.style.transform = "rotate(180deg)";
-    } else if (rotateValue === 3) {
+    } else if (rotateValue === 3 && toggleButtonText.innerText == "Activate Blue") {
         topLeftDial.style.transform = "rotate(270deg)";
-    } else if (rotateValue === 0) {
+    } else if (rotateValue === 0 && toggleButtonText.innerText == "Activate Blue") {
         topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
@@ -421,13 +428,16 @@ function rotateRingBottomLeftInnerDial () {
     }
     
 }
-
+// resume with this one!!!!!!!!!!!!!!!!!!!!!
 function incrementClicksTopLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-top-left-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-left-inner-dial").innerText = 0)
-    
+    } else if (oldNumOfClicks <= 2 || toggleButtonText.innerText == "Activate Blue") { 
+        document.getElementById("rotate-value-top-left-inner-dial").innerText = 0;
+}
 }
 
 function incrementClicksMiddleLeftInnerDial () {
@@ -753,7 +763,7 @@ function rotateCenterDialBottomRight () {
     
 }
 
-// this function has colors removed as a test
+
 function matchingValuesTopLeft () {
     let num1 = parseInt(document.getElementById("rotate-value-top-left").innerText);
     let num2 = parseInt(document.getElementById("random-num-top-left").innerText);
@@ -1023,3 +1033,23 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 } 
+
+function toggleButton () {
+    let tButton = document.getElementById("toggle-button");
+
+    if (tButton.innerText == "Activate Red") {
+        tButton.innerText = "Activate Blue"
+    } else {
+        tButton.innerText = "Activate Red"
+    }
+}
+
+function toggleButtonColor () {
+    let tButton = document.getElementById("toggle-button");
+
+    if (tButton.innerText == "Activate Red") {
+        tButton.style.backgroundColor = "darkgrey"
+    } else {
+        tButton.style.backgroundColor= "lightgrey"
+    }
+}
