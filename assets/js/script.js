@@ -105,15 +105,35 @@ addEventListener("DOMContentLoaded", function() {
         let randomNum7 = Math.floor(Math.random()*3) + 1;
         let randomNum8 = Math.floor(Math.random()*3) + 1;
         let randomNum9 = Math.floor(Math.random()*3) + 1;
-        document.getElementById("random-num-top-left").innerText = randomNum1;
-        document.getElementById("random-num-middle-left").textContent = randomNum2;
-        document.getElementById("random-num-bottom-left").textContent = randomNum3;
-        document.getElementById("random-num-top-middle").textContent = randomNum4;
-        document.getElementById("random-num-center").textContent = randomNum5;
-        document.getElementById("random-num-bottom-middle").textContent = randomNum6;
-        document.getElementById("random-num-top-right").textContent = randomNum7;
-        document.getElementById("random-num-middle-right").textContent = randomNum8;
-        document.getElementById("random-num-bottom-right").textContent = randomNum9;
+        let randomColor1 = Math.floor(Math.random()*3) + 1;
+        let randomColor2 = Math.floor(Math.random()*3) + 1;
+        let randomColor3 = Math.floor(Math.random()*3) + 1;
+        let randomColor4 = Math.floor(Math.random()*3) + 1;
+        let randomColor5 = Math.floor(Math.random()*3) + 1;
+        let randomColor6 = Math.floor(Math.random()*3) + 1;
+        let randomColor7 = Math.floor(Math.random()*3) + 1;
+        let randomColor8 = Math.floor(Math.random()*3) + 1;
+        let randomColor9 = Math.floor(Math.random()*3) + 1;
+        document.getElementById("random-num-top-left").innerText = randomColor1;
+        document.getElementById("random-num-middle-left").textContent = randomColor2;
+        document.getElementById("random-num-bottom-left").textContent = randomColor3;
+        document.getElementById("random-num-top-middle").textContent = randomColor4;
+        document.getElementById("random-num-center").textContent = randomColor5;
+        document.getElementById("random-num-bottom-middle").textContent = randomColor6;
+        document.getElementById("random-num-top-right").textContent = randomColor7;
+        document.getElementById("random-num-middle-right").textContent = randomColor8;
+        document.getElementById("random-num-bottom-right").textContent = randomColor9;
+
+        document.getElementById("random-color-top-left").innerText = randomNum1;
+        document.getElementById("random-color-middle-left").textContent = randomNum2;
+        document.getElementById("random-color-bottom-left").textContent = randomNum3;
+        document.getElementById("random-color-top-middle").textContent = randomNum4;
+        document.getElementById("random-color-center").textContent = randomNum5;
+        document.getElementById("random-color-bottom-middle").textContent = randomNum6;
+        document.getElementById("random-color-top-right").textContent = randomNum7;
+        document.getElementById("random-color-middle-right").textContent = randomNum8;
+        document.getElementById("random-color-bottom-right").textContent = randomNum9;
+
         randomColorTopLeft ();
         randomColorTopMiddle ();
         randomColorTopRight ();
@@ -987,7 +1007,7 @@ function matchingValuesBottomRight () {
 }
 
 function randomColorTopLeft () {
-    let num1 = parseInt(document.getElementById("random-num-top-left").innerText);
+    let num1 = parseInt(document.getElementById("random-color-top-left").innerText);
     let innerDial = document.getElementById("top-left-center-dial");
 
 if (num1 === 1) {
@@ -1000,7 +1020,7 @@ if (num1 === 1) {
 }  
 
 function randomColorTopMiddle () {
-    let num1 = parseInt(document.getElementById("random-num-top-middle").innerText);
+    let num1 = parseInt(document.getElementById("random-color-top-middle").innerText);
     let innerDial = document.getElementById("top-middle-center-dial");
 
 if (num1 === 1) {
@@ -1013,7 +1033,7 @@ if (num1 === 1) {
 }  
 
 function randomColorTopRight () {
-    let num1 = parseInt(document.getElementById("random-num-top-right").innerText);
+    let num1 = parseInt(document.getElementById("random-color-top-right").innerText);
     let innerDial = document.getElementById("top-right-center-dial");
 
 if (num1 === 1) {
@@ -1026,7 +1046,7 @@ if (num1 === 1) {
 }  
 
 function randomColorMiddleLeft () {
-    let num1 = parseInt(document.getElementById("random-num-middle-left").innerText);
+    let num1 = parseInt(document.getElementById("random-color-middle-left").innerText);
     let innerDial = document.getElementById("middle-left-center-dial");
 
 if (num1 === 1) {
@@ -1039,7 +1059,7 @@ if (num1 === 1) {
 }  
 
 function randomColorCenter () {
-    let num1 = parseInt(document.getElementById("random-num-center").innerText);
+    let num1 = parseInt(document.getElementById("random-color-center").innerText);
     let innerDial = document.getElementById("center-dial");
 
 if (num1 === 1) {
@@ -1052,7 +1072,7 @@ if (num1 === 1) {
 } 
 
 function randomColorMiddleRight () {
-    let num1 = parseInt(document.getElementById("random-num-middle-right").innerText);
+    let num1 = parseInt(document.getElementById("random-color-middle-right").innerText);
     let innerDial = document.getElementById("middle-right-center-dial");
 
 if (num1 === 1) {
@@ -1065,7 +1085,7 @@ if (num1 === 1) {
 } 
 
 function randomColorBottomLeft () {
-    let num1 = parseInt(document.getElementById("random-num-bottom-left").innerText);
+    let num1 = parseInt(document.getElementById("random-color-bottom-left").innerText);
     let innerDial = document.getElementById("bottom-left-center-dial");
 
 if (num1 === 1) {
@@ -1078,7 +1098,7 @@ if (num1 === 1) {
 } 
 
 function randomColorBottomMiddle () {
-    let num1 = parseInt(document.getElementById("random-num-bottom-middle").innerText);
+    let num1 = parseInt(document.getElementById("random-color-bottom-middle").innerText);
     let innerDial = document.getElementById("bottom-middle-center-dial");
 
 if (num1 === 1) {
@@ -1091,7 +1111,7 @@ if (num1 === 1) {
 } 
 
 function randomColorBottomRight () {
-    let num1 = parseInt(document.getElementById("random-num-bottom-right").innerText);
+    let num1 = parseInt(document.getElementById("random-color-bottom-right").innerText);
     let innerDial = document.getElementById("bottom-right-center-dial");
 
 if (num1 === 1) {
