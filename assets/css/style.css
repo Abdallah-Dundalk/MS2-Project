@@ -35,13 +35,15 @@
 }
 
 .outer-ring {
-    background: #efd3d7;
+    background: black;
+    border: 2px solid red;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     overflow: hidden;   
     position: relative;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .outer-ring:hover {
@@ -51,7 +53,8 @@
 }
 
 .middle-ring {
-    background: #cbc0d3;
+    background: black;
+    border: 2px solid blue;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -60,6 +63,7 @@
     text-align: center;
     position: relative;
     bottom:60px;
+    box-sizing: border-box;
 }
 
 .middle-ring:hover {
@@ -83,7 +87,7 @@
 }
 
 .outer-ring i {
-    color: black;
+    color: red;
     text-align: center;
     position: relative;
     margin-left: -1px;
@@ -92,7 +96,7 @@
 }
 
 .middle-ring i {
-    color: black;
+    color: blue;
     margin-left: -1px;
     position: relative;
     bottom: 3px;
@@ -129,6 +133,8 @@
     float: left;
     color: black;
     font-size: medium;
+    z-index: 10;
+    position: relative;
 }
 
 #inner-dial-control {
