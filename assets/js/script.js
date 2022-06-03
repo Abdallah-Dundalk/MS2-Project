@@ -198,25 +198,38 @@ function rotateRingBottomLeft () {
 
 function incrementClicksTopLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-top-left").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-left").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-top-left").innerText = 0;
+    } 
     
 }
 
 function incrementClicksMiddleLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-left").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-middle-left").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-middle-left").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-middle-left").innerText = 0;
+    }
+        
     
 }
 
 function incrementClicksBottomLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-left").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-bottom-left").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-left").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-bottom-left").innerText = 0;
+    }
     
 }
 
@@ -275,25 +288,37 @@ function rotateRingBottomMiddle () {
 
 function incrementClicksTopMiddle () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-middle").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-top-middle").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-middle").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-top-middle").innerText = 0;
+    }
     
 }
 
 function incrementClicksCenter () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-center").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-center").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-center").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-center").innerText = 0;
+    }
     
 }
 
 function incrementClicksBottomMiddle () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-center").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-bottom-center").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-center").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-bottom-center").innerText = 0;
+    }
 }
 
 // Right Column
@@ -351,25 +376,37 @@ function rotateRingBottomRight () {
 
 function incrementClicksTopRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-right").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-top-right").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-right").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-top-right").innerText = 0;
+    }
     
 }
 
 function incrementClicksMiddleRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-right").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-middle-right").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-middle-right").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-middle-right").innerText = 0;
+    }
     
 }
 
 function incrementClicksBottomRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-right").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
         document.getElementById("rotate-value-bottom-right").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-right").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+        document.getElementById("rotate-value-bottom-right").innerText = 0;
+    }
     
 }
 
@@ -381,13 +418,13 @@ function rotateRingTopLeftInnerDial () {
     let topLeftDial = document.getElementById("top-row-left-inner-dial");
     let toggleButtonText = document.getElementById("toggle-button");
 
-    if (rotateValue === 1 && toggleButtonText.innerText == "Activate Blue") {
+    if (rotateValue === 1) {
         topLeftDial.style.transform = "rotate(90deg)";
-    } else if (rotateValue === 2 && toggleButtonText.innerText == "Activate Blue") {
+    } else if (rotateValue === 2) {
         topLeftDial.style.transform = "rotate(180deg)";
-    } else if (rotateValue === 3 && toggleButtonText.innerText == "Activate Blue") {
+    } else if (rotateValue === 3) {
         topLeftDial.style.transform = "rotate(270deg)";
-    } else if (rotateValue === 0 && toggleButtonText.innerText == "Activate Blue") {
+    } else if (rotateValue === 0) {
         topLeftDial.style.transform = "rotate(0deg)";
     } else {
         console.log("fail");
@@ -433,26 +470,34 @@ function incrementClicksTopLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
 
-    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-top-left-inner-dial").innerText = ++oldNumOfClicks;
-    } else if (oldNumOfClicks <= 2 || toggleButtonText.innerText == "Activate Blue") { 
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") { 
         document.getElementById("rotate-value-top-left-inner-dial").innerText = 0;
 }
 }
 
 function incrementClicksMiddleLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-left-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-middle-left-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-middle-left-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-middle-left-inner-dial").innerText = 0;
+    }
     
 }
 
 function incrementClicksBottomLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-left-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-bottom-left-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-left-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-bottom-left-inner-dial").innerText = 0;
+    }
     
 }
 
@@ -511,25 +556,37 @@ function rotateRingBottomMiddleInnerDial () {
 
 function incrementClicksTopMiddleInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-middle-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-top-middle-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-middle-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-top-middle-inner-dial").innerText = 0;
+    }
     
 }
 
 function incrementClicksCenterInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-center-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-center-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-center-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red"){
+        document.getElementById("rotate-value-center-inner-dial").innerText = 0;
+    } 
     
 }
 
 function incrementClicksBottomMiddleInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-center-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-bottom-center-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-center-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-bottom-center-inner-dial").innerText = 0;
+    } 
 }
 
 // Right Column
@@ -587,25 +644,37 @@ function rotateRingBottomRightInnerDial () {
 
 function incrementClicksTopRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-right-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-top-right-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-top-right-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-top-right-inner-dial").innerText = 0;
+    } 
     
 }
 
 function incrementClicksMiddleRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-right-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-middle-right-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-middle-right-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-middle-right-inner-dial").innerText = 0;
+    }
     
 }
 
 function incrementClicksBottomRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-right-inner-dial").innerText) ;
-    if (oldNumOfClicks <= 2) {
+    let toggleButtonText = document.getElementById("toggle-button");
+
+    if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
         document.getElementById("rotate-value-bottom-right-inner-dial").innerText = ++oldNumOfClicks;
-    } else (document.getElementById("rotate-value-bottom-right-inner-dial").innerText = 0)
+    } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") {
+        document.getElementById("rotate-value-bottom-right-inner-dial").innerText = 0;
+    }
     
 }
 
@@ -1048,8 +1117,8 @@ function toggleButtonColor () {
     let tButton = document.getElementById("toggle-button");
 
     if (tButton.innerText == "Activate Red") {
-        tButton.style.backgroundColor = "darkgrey"
+        tButton.style.backgroundColor = "Blue"
     } else {
-        tButton.style.backgroundColor= "lightgrey"
+        tButton.style.backgroundColor= "Red"
     }
 }
