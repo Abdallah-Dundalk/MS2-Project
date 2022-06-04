@@ -6,6 +6,7 @@ addEventListener("DOMContentLoaded", function() {
                 incrementClicksTopLeft ();
                 rotateRingTopLeft ();
                 matchingValuesTopLeft ()
+                
             } else if (this.getAttribute("data-type")==="middle-row-left-dial") {
                 incrementClicksMiddleLeft ();
                 rotateRingMiddleLeft ();
@@ -38,11 +39,10 @@ addEventListener("DOMContentLoaded", function() {
                 incrementClicksBottomRight ();
                 rotateRingBottomRight ();
                 matchingValuesBottomRight ()
-            //break
             } 
     })
     }
-    
+    document.getElementById("new-game").addEventListener("click", resetGame);
 
 })
 
@@ -143,6 +143,8 @@ addEventListener("DOMContentLoaded", function() {
         randomColorBottomLeft ();
         randomColorBottomMiddle ();
         randomColorBottomRight ();
+
+        countdown ()
 })
 
 addEventListener("DOMContentLoaded", function() {
@@ -1151,4 +1153,150 @@ function toggleButtonColor () {
     } else {
         tButton.style.backgroundColor= "Red"
     }
+}
+
+function countdown () {
+    let timeRemaining = 60;
+    let timerElement = document.getElementById("timer");
+
+    let countdown = setInterval( function() {
+        if (timeRemaining <= 0) {
+            clearInterval(timeRemaining);
+            document.getElementById("timer").value = 60 - timeRemaining;
+            timeRemaining -= 1;
+        }
+    }
+    )
+
+}
+
+
+let timeRemaining = 60;
+let timerElement = document.getElementById("timer");
+    
+    let timerInterval = setInterval( countdown, 1000); 
+
+    function countdown () {
+        if (timeRemaining <= -1) {
+            clearInterval(timerInterval);
+            document.getElementById("timer").value = 60 - timeRemaining;
+            timeRemaining -= 1;
+            gameOver ()
+        } else {
+            timerElement.innerText = timeRemaining;
+            timeRemaining --;
+    }
+}
+
+function gameOver () {
+    let gameOver = document.getElementById("game-over");
+    gameOver.innerText = "Missiles Launched....Game Over"
+}
+
+function resetGame () {
+    let randomNum1 = Math.floor(Math.random()*3) + 1;
+        let randomNum2 = Math.floor(Math.random()*3) + 1;
+        let randomNum3 = Math.floor(Math.random()*3) + 1;
+        let randomNum4 = Math.floor(Math.random()*3) + 1;
+        let randomNum5 = Math.floor(Math.random()*3) + 1;
+        let randomNum6 = Math.floor(Math.random()*3) + 1;
+        let randomNum7 = Math.floor(Math.random()*3) + 1;
+        let randomNum8 = Math.floor(Math.random()*3) + 1;
+        let randomNum9 = Math.floor(Math.random()*3) + 1;
+        let randomColor1 = Math.floor(Math.random()*3) + 1;
+        let randomColor2 = Math.floor(Math.random()*3) + 1;
+        let randomColor3 = Math.floor(Math.random()*3) + 1;
+        let randomColor4 = Math.floor(Math.random()*3) + 1;
+        let randomColor5 = Math.floor(Math.random()*3) + 1;
+        let randomColor6 = Math.floor(Math.random()*3) + 1;
+        let randomColor7 = Math.floor(Math.random()*3) + 1;
+        let randomColor8 = Math.floor(Math.random()*3) + 1;
+        let randomColor9 = Math.floor(Math.random()*3) + 1;
+        document.getElementById("random-num-top-left").innerText = randomColor1;
+        document.getElementById("random-num-middle-left").textContent = randomColor2;
+        document.getElementById("random-num-bottom-left").textContent = randomColor3;
+        document.getElementById("random-num-top-middle").textContent = randomColor4;
+        document.getElementById("random-num-center").textContent = randomColor5;
+        document.getElementById("random-num-bottom-middle").textContent = randomColor6;
+        document.getElementById("random-num-top-right").textContent = randomColor7;
+        document.getElementById("random-num-middle-right").textContent = randomColor8;
+        document.getElementById("random-num-bottom-right").textContent = randomColor9;
+
+        document.getElementById("random-color-top-left").innerText = randomNum1;
+        document.getElementById("random-color-middle-left").textContent = randomNum2;
+        document.getElementById("random-color-bottom-left").textContent = randomNum3;
+        document.getElementById("random-color-top-middle").textContent = randomNum4;
+        document.getElementById("random-color-center").textContent = randomNum5;
+        document.getElementById("random-color-bottom-middle").textContent = randomNum6;
+        document.getElementById("random-color-top-right").textContent = randomNum7;
+        document.getElementById("random-color-middle-right").textContent = randomNum8;
+        document.getElementById("random-color-bottom-right").textContent = randomNum9;
+
+        randomColorTopLeft ();
+        randomColorTopMiddle ();
+        randomColorTopRight ();
+        randomColorMiddleLeft ();
+        randomColorCenter ();
+        randomColorMiddleRight ();
+        randomColorBottomLeft ();
+        randomColorBottomMiddle ();
+        randomColorBottomRight ();
+
+        test();
+}
+
+function test () {
+    rotateValueTopLeft = document.getElementById("rotate-value-top-left");
+    rotateValueTopMiddle = document.getElementById("rotate-value-top-middle");
+    rotateValueTopRight = document.getElementById("rotate-value-top-right");
+    rotateValueMiddleLeft = document.getElementById("rotate-value-middle-left");
+    rotateValueCenter = document.getElementById("rotate-value-center");
+    rotateValueMiddleRight = document.getElementById("rotate-value-middle-right");
+    rotateValueBottomLeft = document.getElementById("rotate-value-bottom-left");
+    rotateValueBottomMiddle = document.getElementById("rotate-value-bottom-center");
+    rotateValueBottomRight = document.getElementById("rotate-value-bottom-right");
+
+
+    rotateValueTopLeftInnerDial = document.getElementById("rotate-value-top-left-inner-dial");
+    rotateValueTopMiddleInnerDial = document.getElementById("rotate-value-top-middle-inner-dial");
+    rotateValueTopRightInnerDial = document.getElementById("rotate-value-top-right-inner-dial");
+    rotateValueMiddleLeftInnerDial = document.getElementById("rotate-value-middle-left-inner-dial");
+    rotateValueCenterInnerDial = document.getElementById("rotate-value-center-inner-dial");
+    rotateValueMiddleRightInnerDial = document.getElementById("rotate-value-middle-right-inner-dial");
+    rotateValueBottomLeftInnerDial = document.getElementById("rotate-value-bottom-left-inner-dial");
+    rotateValueBottomMiddleInnerDial = document.getElementById("rotate-value-bottom-center-inner-dial");
+    rotateValueBottomRightInnerDial = document.getElementById("rotate-value-bottom-right-inner-dial");
+
+    rotateValueTopLeftInnerDial.innerText = 0;
+    rotateValueTopMiddleInnerDial.innerText = 0;
+    rotateValueTopRightInnerDial.innerText = 0;
+    rotateValueMiddleLeftInnerDial.innerText = 0;
+    rotateValueCenterInnerDial.innerText = 0;
+    rotateValueMiddleRightInnerDial.innerText = 0;
+    rotateValueBottomLeftInnerDial.innerText = 0;
+    rotateValueBottomMiddleInnerDial.innerText = 0;
+    rotateValueBottomRightInnerDial.innerText = 0;
+
+
+    rotateRingTopLeft ();
+    rotateRingTopMiddle ();
+    rotateRingTopRight ();
+    rotateRingMiddleLeft ();
+    rotateRingCenter ();
+    rotateRingMiddleRight ();
+    rotateRingBottomLeft ();
+    rotateRingBottomMiddle ();
+    rotateRingBottomRight ();
+
+    rotateRingTopLeftInnerDial ();
+    rotateRingTopMiddleInnerDial ();
+    rotateRingTopRightInnerDial ();
+    rotateRingMiddleLeftInnerDial ();
+    rotateRingCenterInnerDial ();
+    rotateRingMiddleRightInnerDial ();
+    rotateRingBottomLeftInnerDial ();
+    rotateRingBottomMiddleInnerDial ();
+    rotateRingBottomRightInnerDial ();
+
+    
 }
