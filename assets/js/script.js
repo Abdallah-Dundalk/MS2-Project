@@ -43,6 +43,8 @@ addEventListener("DOMContentLoaded", function() {
     })
     }
     document.getElementById("new-game").addEventListener("click", resetGame);
+    document.getElementById("start-game").addEventListener("click", parentCountdown);
+    
 
 })
 
@@ -144,7 +146,7 @@ addEventListener("DOMContentLoaded", function() {
         randomColorBottomMiddle ();
         randomColorBottomRight ();
 
-        countdown ()
+        
 })
 
 addEventListener("DOMContentLoaded", function() {
@@ -158,13 +160,6 @@ addEventListener("DOMContentLoaded", function() {
     rotateCenterDialBottomMiddle ();
     rotateCenterDialBottomRight ();
 })
-
-// addEventListener("DOMContentLoaded", function() {
-//     let toggleButton = document.getElementById("toggle-button")
-//     addEventListener.toggleButton("click", function() {
-//         toggleButton ()
-//     })
-// })
 
 // Left Column
 function rotateRingTopLeft () {
@@ -487,7 +482,7 @@ function rotateRingBottomLeftInnerDial () {
     }
     
 }
-// resume with this one!!!!!!!!!!!!!!!!!!!!!
+
 function incrementClicksTopLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -1155,38 +1150,40 @@ function toggleButtonColor () {
     }
 }
 
-function countdown () {
+// function countdown () {
+//     let timeRemaining = 60;
+//     let timerElement = document.getElementById("timer");
+
+//     let countdown = setInterval( function() {
+//         if (timeRemaining <= 0) {
+//             clearInterval(timeRemaining);
+//             document.getElementById("timer").value = 60 - timeRemaining;
+//             timeRemaining -= 1;
+//         }
+//     }
+//     )
+
+// }
+
+function parentCountdown () {
     let timeRemaining = 60;
     let timerElement = document.getElementById("timer");
-
-    let countdown = setInterval( function() {
-        if (timeRemaining <= 0) {
-            clearInterval(timeRemaining);
-            document.getElementById("timer").value = 60 - timeRemaining;
-            timeRemaining -= 1;
+        
+        let timerInterval = setInterval( countdown, 1000); 
+    
+        function countdown() {
+            if (timeRemaining <= -1) {
+                clearInterval(timerInterval);
+                document.getElementById("timer").value = 60 - timeRemaining;
+                timeRemaining -= 1;
+                gameOver ()
+            } else {
+                timerElement.innerText = timeRemaining;
+                timeRemaining --;
         }
     }
-    )
-
 }
 
-
-let timeRemaining = 60;
-let timerElement = document.getElementById("timer");
-    
-    let timerInterval = setInterval( countdown, 1000); 
-
-    function countdown () {
-        if (timeRemaining <= -1) {
-            clearInterval(timerInterval);
-            document.getElementById("timer").value = 60 - timeRemaining;
-            timeRemaining -= 1;
-            gameOver ()
-        } else {
-            timerElement.innerText = timeRemaining;
-            timeRemaining --;
-    }
-}
 
 function gameOver () {
     let gameOver = document.getElementById("game-over");
