@@ -1256,6 +1256,16 @@ function test () {
     rotateValueBottomMiddle = document.getElementById("rotate-value-bottom-center");
     rotateValueBottomRight = document.getElementById("rotate-value-bottom-right");
 
+    rotateValueTopLeft.innerText = 0;
+    rotateValueTopMiddle.innerText = 0;
+    rotateValueTopRight.innerText = 0;
+    rotateValueMiddleLeft.innerText = 0;
+    rotateValueCenter.innerText = 0;
+    rotateValueMiddleRight.innerText = 0;
+    rotateValueBottomLeft.innerText = 0;
+    rotateValueBottomMiddle.innerText = 0;
+    rotateValueBottomRight.innerText = 0;
+
 
     rotateValueTopLeftInnerDial = document.getElementById("rotate-value-top-left-inner-dial");
     rotateValueTopMiddleInnerDial = document.getElementById("rotate-value-top-middle-inner-dial");
@@ -1287,6 +1297,16 @@ function test () {
     rotateRingBottomLeft ();
     rotateRingBottomMiddle ();
     rotateRingBottomRight ();
+
+    rotateCenterDialTopLeft ();
+    rotateCenterDialTopMiddle ();
+    rotateCenterDialTopRight ();
+    rotateCenterDialMiddleLeft ();
+    rotateCenterDialMiddle ();
+    rotateCenterDialMiddleRight ();
+    rotateCenterDialBottomLeft ();
+    rotateCenterDialBottomMiddle ();
+    rotateCenterDialBottomRight ();
 
     rotateRingTopLeftInnerDial ();
     rotateRingTopMiddleInnerDial ();
