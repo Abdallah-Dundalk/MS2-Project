@@ -44,6 +44,10 @@ addEventListener("DOMContentLoaded", function() {
     }
     document.getElementById("new-game").addEventListener("click", resetGame);
     document.getElementById("start-game").addEventListener("click", parentCountdown);
+    document.getElementById("start-game").addEventListener("click", resetGame);
+    document.getElementById("start-game").addEventListener("click", defaultGameStatusMessage);
+
+    
     
 
 })
@@ -1150,21 +1154,6 @@ function toggleButtonColor () {
     }
 }
 
-// function countdown () {
-//     let timeRemaining = 60;
-//     let timerElement = document.getElementById("timer");
-
-//     let countdown = setInterval( function() {
-//         if (timeRemaining <= 0) {
-//             clearInterval(timeRemaining);
-//             document.getElementById("timer").value = 60 - timeRemaining;
-//             timeRemaining -= 1;
-//         }
-//     }
-//     )
-
-// }
-
 function parentCountdown () {
     let timeRemaining = 60;
     let timerElement = document.getElementById("timer");
@@ -1172,11 +1161,26 @@ function parentCountdown () {
         let timerInterval = setInterval( countdown, 1000); 
     
         function countdown() {
+            let topLeftCenterDial = document.getElementById("top-left-center-dial").style.backgroundColor;
+            let topMiddleCenterDial = document.getElementById("top-middle-center-dial").style.backgroundColor;
+            let topRightCenterDial = document.getElementById("top-right-center-dial").style.backgroundColor;
+            let middleLeftCenterDial = document.getElementById("middle-left-center-dial").style.backgroundColor;
+            let centerDial = document.getElementById("center-dial").style.backgroundColor;
+            let middleRightCenterDial = document.getElementById("middle-right-center-dial").style.backgroundColor;
+            let bottomLeftCenterDial = document.getElementById("bottom-left-center-dial").style.backgroundColor;
+            let bottomMiddleCenterDial = document.getElementById("bottom-middle-center-dial").style.backgroundColor;
+            let bottomRightCenterDial = document.getElementById("bottom-right-center-dial").style.backgroundColor;
+
             if (timeRemaining <= -1) {
                 clearInterval(timerInterval);
                 document.getElementById("timer").value = 60 - timeRemaining;
                 timeRemaining -= 1;
                 gameOver ()
+            } else if (topLeftCenterDial && topMiddleCenterDial && topRightCenterDial && middleLeftCenterDial && centerDial && middleRightCenterDial && bottomLeftCenterDial && bottomMiddleCenterDial && bottomRightCenterDial == "green") {
+                clearInterval(timerInterval);
+                document.getElementById("timer").value = 60 - timeRemaining;
+                timeRemaining -= 1;
+                winRound ()
             } else {
                 timerElement.innerText = timeRemaining;
                 timeRemaining --;
@@ -1316,4 +1320,14 @@ function test () {
     rotateRingBottomRightInnerDial ();
 
     
+}
+
+function winRound () {
+    let winRound = document.getElementById("game-over");
+    winRound.innerText = "Launch sequence disabled";
+}
+
+function defaultGameStatusMessage () {
+   let defaultMessage = document.getElementById("game-over");
+   defaultMessage.innerText = " ";
 }
