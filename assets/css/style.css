@@ -113,14 +113,14 @@
 
 .center-ring {
     
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     margin: 10px auto;
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom: 120px;    
+    bottom: 125px;    
 }
 
 .outer-ring i {
@@ -156,30 +156,27 @@
 .center-ring i {
     color: black;
     text-align: center;
-    margin-left: -1px;
+   
     position: relative;
-    top: 1px;
-    font-size: small;
+    top: -1px;
+    font-size: xx-large;
 }
 
-
 #toggle-button {
-    height: 80px;
-    width: 80px;
-    border-radius: 50px;
-    margin: 15px auto;
+    height: 110px;
+    width: 110px;
+    border-radius: 100px;
+    margin: 30px auto;
     color: black;
     background-color: blue;
-    font-size: small;
+    font-size: large;
     z-index: 10;
     position: relative;
     border: black solid 1px;
     display: block;
-    line-height: 80px;
+    line-height: 110px;
     text-align: center;
 }
-
-
 
 #inner-dial-control {
     background-color: blue;
@@ -246,3 +243,218 @@
 body {
     background-color: black;
 }
+
+
+@media only screen and (min-width: 600px) {
+    #top-left {
+        margin-top: 80px;
+    }
+    
+    #top-middle {
+        margin-top: 80px;
+    }
+    
+    #top-right {
+        margin-top: 80px;
+    }
+    
+    #middle-left {
+        margin-top: 60px;
+    }
+    
+    #middle-middle {
+        margin-top: 60px;
+    }
+    
+    #middle-right {
+        margin-top: 60px;
+    }
+    
+    #bottom-left {
+        margin-top: 60px;
+    }
+    
+    #bottom-middle {
+        margin-top: 60px;
+    }
+    
+    #bottom-right {
+        margin-top: 60px;
+    }
+
+    .rows-container {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-rows: 200px 200px 200px;
+        
+    }
+
+    #game-over {
+        margin-top: 350px;
+    }
+
+    .dial {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    }
+    
+
+    .outer-ring {
+        
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;   
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+        
+    .middle-ring {
+        width: 80px;
+        height: 80px;
+        margin: 10px auto;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        bottom:110px;
+        box-sizing: border-box;
+    }
+        
+    .center-ring {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 10px auto;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        bottom: 185px;    
+    }
+
+    .outer-ring i {
+        margin-left: -1px;
+        bottom: 7px;
+        font-size: 20px;
+    }
+    
+    .middle-ring i {
+        margin-left: -1px;
+        bottom: 7px;
+        font-size: 20px;
+    }
+    
+    .center-ring i {
+        top: 7px;
+    }
+
+  }
+
+
+  @media only screen and (min-width: 950px) {
+    #top-left {
+        margin-top: 60px;
+    }
+    
+    #top-middle {
+        margin-top: 60px;
+    }
+    
+    #top-right {
+        margin-top: 60px;
+    }
+    
+    #middle-left {
+        margin-top: 60px;
+    }
+    
+    #middle-middle {
+        margin-top: 60px;
+    }
+    
+    #middle-right {
+        margin-top: 60px;
+    }
+    
+    
+    #bottom-left {
+        margin-top: 60px;
+    }
+    
+    #bottom-middle {
+        margin-top: 60px;
+    }
+    
+    #bottom-right {
+        margin-top: 60px;
+    }
+
+    .rows-container {
+        display: grid;
+        margin-top: 0px;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-rows: 300px 300px 300px; 
+    }
+
+    #game-over {
+        margin-top: 600px;
+    }
+
+    #toggle-button {
+        margin: 30px auto;
+    }
+
+    .outer-ring {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        overflow: hidden;   
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+        
+    .middle-ring {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        bottom:195px;
+        box-sizing: border-box;
+    }
+        
+    .center-ring {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 10px auto;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        bottom: 320px;    
+    }
+
+    .outer-ring i {
+        margin-left: -1px;
+        bottom: 6px;
+        font-size: 30px;
+    }
+    
+    .middle-ring i {
+        margin-left: -1px;
+        bottom: 5px;
+        font-size: 30px;
+    }
+    
+    .center-ring i {
+        top: 7px;
+        font-size: 60px;
+    }
+
+  }
