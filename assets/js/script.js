@@ -1608,23 +1608,6 @@ function decreaseScore9 () {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function totalScore () {
     let score1 = parseInt(document.getElementById("score-1").innerText); 
     let score2 = parseInt(document.getElementById("score-2").innerText); 
@@ -1635,5 +1618,5 @@ function totalScore () {
     let score7 = parseInt(document.getElementById("score-7").innerText); 
     let score8 = parseInt(document.getElementById("score-8").innerText);
     let score9 = parseInt(document.getElementById("score-9").innerText); 
-    document.getElementById("score").innerText = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9;
+    document.getElementById("score").innerText = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + " points";
 }

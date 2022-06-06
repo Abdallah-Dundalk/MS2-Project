@@ -1,3 +1,17 @@
+.rows-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    
+}
+
+.rows-container > div {
+    background-color: yellow;
+    border: black 5px solid;
+    padding: 10px;
+}
+
 #score {
     background: red;
     height: 30px;
@@ -25,22 +39,62 @@
 #game-area {
     background: darkgray;
     width: 80%;
-    height: 300px;
+    height: 900px;
     margin-left: 10%;
     margin-right: 10%;
     box-sizing: border-box;
     margin-top: 30px;
     margin-bottom: 30px;
     clear: both;
+    z-index: -1;
 }
 
 .dial {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    margin: 30px 9px 30px;
-    display: inline-block;
+    /* display: block; */
 }
+
+/* #top-left{
+    float: left;
+} */
+/* 
+#top-row-middle-dial{
+ margin: 15px auto;
+ float: right;
+ width: 100px;
+ 
+} */
+
+/* #top-right{
+    float: right;
+}
+
+#middle-left{
+    float: left;
+} */
+
+/* #middle-middle{
+ margin: 0 43%;
+} */
+
+/* #middle-right{
+    float: right;
+} */
+
+/* #bottom-left{
+    float: left;
+} */
+
+/* #bottom-middle{
+ margin: 0 43%;
+} */
+
+/* #bottom-right{
+    float: right;
+} */
+
 
 .outer-ring {
     background: black;
@@ -52,6 +106,8 @@
     position: relative;
     text-align: center;
     box-sizing: border-box;
+    margin: 0 auto;
+    
 }
 
 .outer-ring:hover {
@@ -89,9 +145,7 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom: 100px;
-
-    
+    bottom: 100px;    
 }
 
 .outer-ring i {
@@ -120,19 +174,6 @@
     font-size: small;
 }
 
-.middle-row {
-    position: relative;
-    bottom: 80px;
-    display: inline-block;
-    margin: 15px 9px 30px;
-}
-
-.bottom-row {
-    position: relative;
-    bottom: 200px;
-    display: inline-block;
-    margin: 30px 9px 30px;
-}
 
 #toggle-button {
     height: 50px;
@@ -159,3 +200,12 @@
     width: 50px;
     margin: 0 auto;
 }
+
+
+
+
+
+
+
+
+
