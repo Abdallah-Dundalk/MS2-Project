@@ -20,11 +20,11 @@
         <div class="rows-container">
             <div  id="top-left" class="top-row" class="dial">
                 <div data-type="top-row-left-dial"  id="top-row-left-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-left-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-row-left-inner-dial" data-type="top-row-left-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-left-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-left-center-dial" class="center-ring">
@@ -34,11 +34,11 @@
 
             <div id="top-right" class="top-row" class="dial">
                 <div id="top-row-right-dial" data-type="top-row-right-dial"  class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-right-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-row-right-inner-dial" data-type="top-row-right-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-right-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-right-center-dial" class="center-ring">
@@ -48,11 +48,11 @@
 
             <div id="top-middle" class="top-row" class="dial">
                 <div id="top-row-middle-dial" data-type="top-row-middle-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-center-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-row-middle-inner-dial" data-type="top-row-middle-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="top-center-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="top-middle-center-dial" class="center-ring">
@@ -68,11 +68,11 @@
         
             <div id="middle-left" class="middle-row"  class="dial">
                 <div id="middle-row-left-dial" data-type="middle-row-left-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-left-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="middle-row-left-inner-dial" id="middle-row-left-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-left-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="middle-left-center-dial" class="center-ring">
@@ -82,11 +82,11 @@
 
             <div id="middle-middle" class="middle-row" class="dial">
                 <div id="middle-row-center-dial" data-type="middle-row-center-dial"  class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-center-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="middle-row-center-inner-dial" id="middle-row-center-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-center-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="center-dial" class="center-ring">
@@ -96,11 +96,11 @@
 
             <div id="middle-right" class="middle-row" class="dial">
                 <div id="middle-row-right-dial" data-type="middle-row-right-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-right-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="middle-row-right-inner-dial" id="middle-row-right-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="middle-right-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="middle-right-center-dial"class="center-ring">
@@ -114,11 +114,11 @@
             
             <div id="bottom-left" class="bottom-row"  class="dial">
                 <div id="bottom-row-left-dial" data-type="bottom-row-left-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="bottom-left-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="bottom-row-left-inner-dial" id="bottom-row-left-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="bottom-left-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="bottom-left-center-dial" class="center-ring">
@@ -128,11 +128,11 @@
 
             <div id="bottom-middle" class="bottom-row" class="dial">
                 <div id="bottom-row-center-dial" data-type="bottom-row-center-dial"  class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="bottom-center-outer-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="bottom-row-center-inner-dial" id="bottom-row-center-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id=bottom-center-inner-icon class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="bottom-middle-center-dial" class="center-ring">
@@ -155,7 +155,7 @@
             </div>
         </div>
 
-        <span onclick="toggleButton (); toggleButtonColor (); toggleOuterDialColor ()"  id="toggle-button">Activate Red</span>
+        <span onclick="toggleButton (); toggleButtonColor ();toggleOuterDialColorTopRight (); toggleDialColorTopMiddle (); toggleDialColorTopLeft (); toggleOuterDialColorMiddleRight (); toggleDialColorMiddleMiddle (); toggleDialColorMiddleLeft (); toggleDialColorBottomLeft (); toggleDialColorBottomMiddle (); toggleOuterDialColor ()"  id="toggle-button">Activate Red</span>
         
     </div>
     <div id="game-over"></div>

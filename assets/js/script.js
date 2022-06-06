@@ -1186,6 +1186,255 @@ function toggleButtonColor () {
     }
 }
 
+
+// toggle Dial Colors
+
+function toggleDialColorTopLeft () {
+    let outerRing = document.getElementById("top-row-left-dial");
+    let innerRing = document.getElementById("top-row-left-inner-dial")
+    let outerIcon = document.getElementById("top-left-outer-icon");
+    let innerIcon = document.getElementById( "top-left-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+
+// bottom middle
+function toggleDialColorTopMiddle () {
+    let outerRing = document.getElementById("top-row-middle-dial");
+    let innerRing = document.getElementById("top-row-middle-inner-dial")
+    let outerIcon = document.getElementById("top-center-outer-icon");
+    let innerIcon = document.getElementById( "top-center-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+function toggleOuterDialColorTopRight () {
+    let outerRing = document.getElementById("top-row-right-dial");
+    let innerRing = document.getElementById("top-row-right-inner-dial")
+    let outerIcon = document.getElementById("top-right-outer-icon");
+    let innerIcon = document.getElementById( "top-right-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleDialColorMiddleLeft () {
+    let outerRing = document.getElementById("middle-row-left-dial");
+    let innerRing = document.getElementById("middle-row-left-inner-dial")
+    let outerIcon = document.getElementById("middle-left-outer-icon");
+    let innerIcon = document.getElementById( "middle-left-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+
+// bottom middle
+function toggleDialColorMiddleMiddle () {
+    let outerRing = document.getElementById("middle-row-center-dial");
+    let innerRing = document.getElementById("middle-row-center-inner-dial")
+    let outerIcon = document.getElementById("middle-center-outer-icon");
+    let innerIcon = document.getElementById( "middle-center-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+// bottom right
+function toggleOuterDialColorMiddleRight () {
+    let outerRing = document.getElementById("middle-row-right-dial");
+    let innerRing = document.getElementById("middle-row-right-inner-dial")
+    let outerIcon = document.getElementById("middle-right-outer-icon");
+    let innerIcon = document.getElementById( "middle-right-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleDialColorBottomLeft () {
+    let outerRing = document.getElementById("bottom-row-left-dial");
+    let innerRing = document.getElementById("bottom-row-left-inner-dial")
+    let outerIcon = document.getElementById("bottom-left-outer-icon");
+    let innerIcon = document.getElementById( "bottom-left-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+
+// bottom middle
+function toggleDialColorBottomMiddle () {
+    let outerRing = document.getElementById("bottom-row-center-dial");
+    let innerRing = document.getElementById("bottom-row-center-inner-dial")
+    let outerIcon = document.getElementById("bottom-center-outer-icon");
+    let innerIcon = document.getElementById( "bottom-center-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
+// bottom right
 function toggleOuterDialColor () {
     let outerRing = document.getElementById("bottom-row-right-dial");
     let innerRing = document.getElementById("bottom-row-right-inner-dial")
