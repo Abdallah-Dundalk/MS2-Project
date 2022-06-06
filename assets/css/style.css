@@ -21,6 +21,8 @@
     line-height: 60px;
     color: antiquewhite;
     font-size: 35px;
+    position: relative;
+    top:0px
 }
 
 #start-game {
@@ -47,6 +49,8 @@
     line-height: 60px;
     color: antiquewhite;
     font-size: 35px;
+    position: relative;
+    top:0px
 }
 
 #game-area {
@@ -304,7 +308,9 @@ body {
     }
 
     #game-over {
-        margin-top: 350px;
+        margin-top: 0px;
+        position: relative;
+        bottom: 300px;
     }
 
     .dial {
@@ -364,6 +370,7 @@ body {
         top: 7px;
     }
 
+    
 
   }
 
@@ -475,4 +482,42 @@ body {
         font-size: 60px;
     }
     
+  }
+
+  @media only screen and (max-width: 600px) {
+      #score {
+        position: relative;
+        top:600px;
+        font-size: 20px;
+    }
+    
+    #timer {
+    position: relative;
+    top:600px;
+    font-size: 20px;
+    width: 50%;
+    }
+
+    #start-game {
+        width: 100%;
+        margin: 0 auto;
+        position:relative;
+        top: -40px;
+        line-height: 40px;
+        font-size: 40px;
+    }
+
+    #game-area {
+        margin-top: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 1150px) {
+    #score {
+        font-size: 25px;
+    }
+    
+    #timer {
+    font-size: 25px;
+    }
   }
