@@ -12,28 +12,41 @@
 }
 
 #score {
-    background: red;
-    height: 30px;
+    height: 60px;
     width: 20%;
     display:block;
     float: left;
     margin: 20px 0 20px 10%;
+    text-align: center;
+    line-height: 60px;
+    color: antiquewhite;
+    font-size: 35px;
 }
 
 #start-game {
-    background: yellow;
-    height: 30px;
+    height: 60px;
     width: 20%;
     margin: 30px auto;
+    display:block;
+    float: left;
+    margin: 20px 0 20px 10%;
+    text-align: center;
+    line-height: 60px;
+    color: antiquewhite;
+    font-size: 60px;
 }
 
 #timer {
-    background: blue;
-    height: 30px;
-    width: 20%;
-    margin: 20px 10% 20px 0;
+
+    margin: 20px 5% 20px 0;
     display: block;
     float: right;
+    height: 60px;
+    width: 30%;
+    text-align: center;
+    line-height: 60px;
+    color: antiquewhite;
+    font-size: 35px;
 }
 
 #game-area {
@@ -404,7 +417,7 @@ body {
     }
 
     #game-over {
-        margin-top: 600px;
+        margin-top: 675px;
     }
 
     #toggle-button {

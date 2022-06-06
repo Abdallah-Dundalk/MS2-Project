@@ -1218,28 +1218,29 @@ function parentCountdown () {
         let timerInterval = setInterval( countdown, 1000); 
     
         function countdown() {
-            let topLeftCenterDial = document.getElementById("top-left-center-dial").style.backgroundColor;
-            let topMiddleCenterDial = document.getElementById("top-middle-center-dial").style.backgroundColor;
-            let topRightCenterDial = document.getElementById("top-right-center-dial").style.backgroundColor;
-            let middleLeftCenterDial = document.getElementById("middle-left-center-dial").style.backgroundColor;
-            let centerDial = document.getElementById("center-dial").style.backgroundColor;
-            let middleRightCenterDial = document.getElementById("middle-right-center-dial").style.backgroundColor;
-            let bottomLeftCenterDial = document.getElementById("bottom-left-center-dial").style.backgroundColor;
-            let bottomMiddleCenterDial = document.getElementById("bottom-middle-center-dial").style.backgroundColor;
-            let bottomRightCenterDial = document.getElementById("bottom-right-center-dial").style.backgroundColor;
+            // let topLeftCenterDial = document.getElementById("top-left-center-dial").style.backgroundColor;
+            // let topMiddleCenterDial = document.getElementById("top-middle-center-dial").style.backgroundColor;
+            // let topRightCenterDial = document.getElementById("top-right-center-dial").style.backgroundColor;
+            // let middleLeftCenterDial = document.getElementById("middle-left-center-dial").style.backgroundColor;
+            // let centerDial = document.getElementById("center-dial").style.backgroundColor;
+            // let middleRightCenterDial = document.getElementById("middle-right-center-dial").style.backgroundColor;
+            // let bottomLeftCenterDial = document.getElementById("bottom-left-center-dial").style.backgroundColor;
+            // let bottomMiddleCenterDial = document.getElementById("bottom-middle-center-dial").style.backgroundColor;
+            // let bottomRightCenterDial = document.getElementById("bottom-right-center-dial").style.backgroundColor;
+            let score = parseInt(document.getElementById("score").innerText); 
 
             if (timeRemaining <= -1) {
                 clearInterval(timerInterval);
                 document.getElementById("timer").value = 60 - timeRemaining;
                 timeRemaining -= 1;
                 gameOver ()
-            } else if (topLeftCenterDial && topMiddleCenterDial && topRightCenterDial && middleLeftCenterDial && centerDial && middleRightCenterDial && bottomLeftCenterDial && bottomMiddleCenterDial && bottomRightCenterDial == "green") {
+            } else if (score === 9000 ) {
                 clearInterval(timerInterval);
                 document.getElementById("timer").value = 60 - timeRemaining;
                 timeRemaining -= 1;
                 winRound ()
             } else {
-                timerElement.innerText = timeRemaining;
+                timerElement.innerText = timeRemaining + " seconds until launch";
                 timeRemaining --;
         }
     }
@@ -1301,6 +1302,7 @@ function resetGame () {
         randomColorBottomRight ();
 
         test();
+        resetScore ()
 }
 
 function test () {
@@ -1375,8 +1377,6 @@ function test () {
     rotateRingBottomLeftInnerDial ();
     rotateRingBottomMiddleInnerDial ();
     rotateRingBottomRightInnerDial ();
-
-    
 }
 
 function winRound () {
@@ -1643,5 +1643,29 @@ function totalScore () {
     let score7 = parseInt(document.getElementById("score-7").innerText); 
     let score8 = parseInt(document.getElementById("score-8").innerText);
     let score9 = parseInt(document.getElementById("score-9").innerText); 
-    document.getElementById("score").innerText = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + " points";
+    document.getElementById("score").innerText = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + ".pts";
+}
+
+function resetScore () {
+    let totalScore = document.getElementById("score");
+    let score1 = document.getElementById("score-1");
+    let score2 = document.getElementById("score-2");
+    let score3 = document.getElementById("score-3");
+    let score4 = document.getElementById("score-4");
+    let score5 = document.getElementById("score-5");
+    let score6 = document.getElementById("score-6");
+    let score7 = document.getElementById("score-7");
+    let score8 = document.getElementById("score-8");
+    let score9 = document.getElementById("score-9");
+
+    totalScore.innerText = "0.pts";
+    score1.innerText = "0";
+    score2.innerText = "0";
+    score3.innerText = "0";
+    score4.innerText = "0";
+    score5.innerText = "0";
+    score6.innerText = "0";
+    score7.innerText = "0";
+    score8.innerText = "0";
+    score9.innerText = "0";
 }
