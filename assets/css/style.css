@@ -1,22 +1,24 @@
 .rows-container {
     display: grid;
-    gap: 10px;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
+
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    grid-template-rows: 200px 200px 200px;
     
 }
 
 .rows-container > div {
     background-color: yellow;
-    border: black 5px solid;
-    padding: 10px;
+    
+    width: 100%;
+    place-items: center center;
 }
 
 #score {
     background: red;
     height: 30px;
     width: 20%;
-    display: inline-block;
+    display:block;
+    float: left;
     margin: 30px 0 30px 10%;
 }
 
@@ -25,15 +27,15 @@
     height: 30px;
     width: 20%;
     margin: 30px auto;
-    display: inline-block;
 }
 
 #timer {
     background: blue;
     height: 30px;
     width: 20%;
-    margin: 30px 0px 30px 0;
-    display: inline-block;
+    margin: 30px 10% 30px 0;
+    display: block;
+    float: right;
 }
 
 #game-area {
@@ -47,60 +49,22 @@
     margin-bottom: 30px;
     clear: both;
     z-index: -1;
+    box-sizing: border-box;
 }
 
 .dial {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    /* display: block; */
 }
 
-/* #top-left{
-    float: left;
-} */
-/* 
-#top-row-middle-dial{
- margin: 15px auto;
- float: right;
- width: 100px;
- 
-} */
-
-/* #top-right{
-    float: right;
-}
-
-#middle-left{
-    float: left;
-} */
-
-/* #middle-middle{
- margin: 0 43%;
-} */
-
-/* #middle-right{
-    float: right;
-} */
-
-/* #bottom-left{
-    float: left;
-} */
-
-/* #bottom-middle{
- margin: 0 43%;
-} */
-
-/* #bottom-right{
-    float: right;
-} */
 
 
 .outer-ring {
     background: black;
     border: 2px solid red;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;   
     position: relative;
@@ -119,14 +83,14 @@
 .middle-ring {
     background: black;
     border: 2px solid blue;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin: 10px auto;
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom:60px;
+    bottom:80px;
     box-sizing: border-box;
 }
 
@@ -145,7 +109,7 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom: 100px;    
+    bottom: 130px;    
 }
 
 .outer-ring i {
@@ -176,15 +140,22 @@
 
 
 #toggle-button {
-    height: 50px;
-    width: 50px;
-    margin-left: 10%;
-    float: left;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 50px auto;
     color: black;
+    background-color: blue;
     font-size: medium;
     z-index: 10;
     position: relative;
+    border: black solid 1px;
+    display: block;
+    line-height: 100px;
+    text-align: center;
 }
+
+
 
 #inner-dial-control {
     background-color: blue;
@@ -198,14 +169,55 @@
     background-color: red;
     height: 50px;
     width: 50px;
+    margin: 30px auto;
+}
+
+#game-over {
     margin: 0 auto;
+    font-size: large;
+    color: red;
+    font-weight: bolder;
+    display: block;
+    background: yellow;
+    text-align: center;
+}
+
+#top-left {
+    margin-top: 75px;
+}
+
+#top-middle {
+    margin-top: 75px;
+}
+
+#top-right {
+    margin-top: 75px;
+}
+
+#middle-left {
+    margin-top: 75px;
+}
+
+#middle-middle {
+    margin-top: 75px;
+}
+
+#middle-right {
+    margin-top: 75px;
 }
 
 
+#bottom-left {
+    margin-top: 75px;
+}
 
+#bottom-middle {
+    margin-top: 75px;
+}
 
-
-
+#bottom-right {
+    margin-top: 75px;
+}
 
 
 
