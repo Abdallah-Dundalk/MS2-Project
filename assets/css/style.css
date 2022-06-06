@@ -2,13 +2,11 @@
     display: grid;
 
     grid-template-columns: 33.333% 33.333% 33.333%;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px;
     
 }
 
-.rows-container > div {
-    background-color: yellow;
-    
+.rows-container > div {   
     width: 100%;
     place-items: center center;
 }
@@ -19,7 +17,7 @@
     width: 20%;
     display:block;
     float: left;
-    margin: 30px 0 30px 10%;
+    margin: 20px 0 20px 10%;
 }
 
 #start-game {
@@ -33,15 +31,15 @@
     background: blue;
     height: 30px;
     width: 20%;
-    margin: 30px 10% 30px 0;
+    margin: 20px 10% 20px 0;
     display: block;
     float: right;
 }
 
 #game-area {
-    background: darkgray;
+    /* background: rgb(28, 1, 34); */
     width: 80%;
-    height: 900px;
+    height: 450px;
     margin-left: 10%;
     margin-right: 10%;
     box-sizing: border-box;
@@ -61,8 +59,14 @@
 
 
 .outer-ring {
-    background: black;
-    border: 2px solid red;
+    
+    border: .2rem solid white;
+    box-shadow: 0 0 .2rem white,
+                0 0 .2rem white,
+                0 0 .2rem red,
+                0 0 .8rem red,
+                0 0 .8rem red,
+                inset 0 0 1.3rem red;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -71,8 +75,10 @@
     text-align: center;
     box-sizing: border-box;
     margin: 0 auto;
-    
+    /* background-color: black; */
 }
+
+
 
 .outer-ring:hover {
     
@@ -81,16 +87,21 @@
 }
 
 .middle-ring {
-    background: black;
-    border: 2px solid blue;
-    width: 60px;
-    height: 60px;
+    border: 2px solid white;
+    box-shadow: 0 0 .2rem white,
+                0 0 .2rem white,
+                0 0 .2rem blue,
+                0 0 .8rem blue,
+                0 0 .8rem blue,
+                inset 0 0 1.3rem blue;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin: 10px auto;
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom:80px;
+    bottom:75px;
     box-sizing: border-box;
 }
 
@@ -101,7 +112,7 @@
 }
 
 .center-ring {
-    background: #8e9aaf;
+    
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -109,23 +120,36 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    bottom: 130px;    
+    bottom: 120px;    
 }
 
 .outer-ring i {
-    color: red;
+    color: white;
+    text-shadow: 
+    0 0 7px white,
+    0 0 10px white,
+    0 0 21px red,
+    0 0 42px red,
+    0 0 82px red;
+                
     text-align: center;
     position: relative;
     margin-left: -1px;
-    bottom: 3px;
+    bottom: 7px;
     font-size: small;
 }
 
 .middle-ring i {
-    color: blue;
+    color: white;
+    text-shadow: 
+    0 0 7px white,
+    0 0 10px white,
+    0 0 21px blue,
+    0 0 42px blue,
+    0 0 82px blue;
     margin-left: -1px;
     position: relative;
-    bottom: 3px;
+    bottom: 7px;
     font-size: small;
 }
 
@@ -140,18 +164,18 @@
 
 
 #toggle-button {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50px;
-    margin: 50px auto;
+    margin: 15px auto;
     color: black;
     background-color: blue;
-    font-size: medium;
+    font-size: small;
     z-index: 10;
     position: relative;
     border: black solid 1px;
     display: block;
-    line-height: 100px;
+    line-height: 80px;
     text-align: center;
 }
 
@@ -183,41 +207,42 @@
 }
 
 #top-left {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #top-middle {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #top-right {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #middle-left {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #middle-middle {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #middle-right {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 
 #bottom-left {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #bottom-middle {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 #bottom-right {
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
-
-
+body {
+    background-color: black;
+}

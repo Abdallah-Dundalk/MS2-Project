@@ -142,11 +142,11 @@
 
             <div id="bottom-right" class="bottom-row" class="dial">
                 <div id="bottom-row-right-dial" data-type="bottom-row-right-dial" class="outer-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i id="bottom-right-outer-icon"  class="fas fa-angle-down"></i>
                 </div>
 
                 <div data-type="bottom-row-right-inner-dial" id="bottom-row-right-inner-dial" class="middle-ring">
-                    <i class="fas fa-angle-down"></i>
+                    <i  id="bottom-right-inner-icon" class="fas fa-angle-down"></i>
                 </div>
 
                 <div id="bottom-right-center-dial" class="center-ring">
@@ -155,7 +155,7 @@
             </div>
         </div>
 
-        <span onclick="toggleButton (); toggleButtonColor ()" id="toggle-button">Activate Red</span>
+        <span onclick="toggleButton (); toggleButtonColor (); toggleOuterDialColor ()"  id="toggle-button">Activate Red</span>
         
     </div>
     <div id="game-over"></div>

@@ -1186,6 +1186,31 @@ function toggleButtonColor () {
     }
 }
 
+function toggleOuterDialColor () {
+    let outerRing = document.getElementById("bottom-row-right-dial");
+    let innerRing = document.getElementById("bottom-row-right-inner-dial")
+    let outerIcon = document.getElementById("bottom-right-outer-icon");
+    let innerIcon = document.getElementById( "bottom-right-inner-icon")
+    let tButton = document.getElementById("toggle-button");
+    
+
+    if (tButton.innerText == "Activate Red") {
+        outerRing.style.borderColor ="slategrey";
+        outerIcon.style.color ="slategrey";
+       
+        innerRing.style.borderColor ="white";
+        innerIcon.style.color ="white";
+
+    } else if (tButton.innerText == "Activate Blue") {
+        outerRing.style.borderColor ="white";
+        outerIcon.style.color ="white";
+        innerRing.style.borderColor ="slategrey";
+        innerIcon.style.color ="slategrey";
+
+    }
+
+}
+
 function parentCountdown () {
     let timeRemaining = 60;
     let timerElement = document.getElementById("timer");
