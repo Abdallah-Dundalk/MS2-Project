@@ -133,6 +133,66 @@ if (this.getAttribute("data-type")==="top-row-left-inner-dial") {
 
 })
 
+
+// center dails
+addEventListener("DOMContentLoaded", function() {
+    let centerRings = document.getElementsByClassName("center-ring");
+    for (let centerRing of centerRings) {
+        centerRing.addEventListener("click", function() {
+if (this.getAttribute("data-type")==="top-left-center-dial") {
+                topLeftcenterButton ();
+                matchingValuesTopLeft ();
+                score ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="middle-left-center-dial") {
+                MiddleLeftCenterButton ();
+                matchingValuesMiddleLeft ();
+                score4 ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="bottom-left-center-dial") {
+                BottomLeftCenterButton ();
+                matchingValuesBottomLeft ();
+                score7 ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="top-middle-center-dial") {
+                topMiddleCenterButton ();
+                matchingValuesTopMiddle ();
+                score2 ();
+                totalScore ();
+            }  else if (this.getAttribute("data-type")==="center-dial") {
+                MiddleMiddleCenterButton ();
+                matchingValuesCenter ();
+                score5 ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="bottom-middle-center-dial") {
+                BottomMiddleCenterButton ();
+                matchingValuesBottomMiddle ();
+                score8 ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="top-right-center-dial") {
+                topRightCenterButton ();
+                matchingValuesTopRight ();
+                score3 ();
+                totalScore ();
+            }  else if (this.getAttribute("data-type")==="middle-right-center-dial") {
+                MiddleRightCenterButton ();
+                matchingValuesMiddleRight ();
+                score6 ();
+                totalScore ();
+            } else if (this.getAttribute("data-type")==="bottom-right-center-dial") {
+                BottomRightCenterButton ();
+                matchingValuesBottomRight ();
+                score9 ();
+                totalScore ();
+            }
+
+    })
+    }
+
+})
+
+
+
 addEventListener("DOMContentLoaded", function() {
         let randomNum1 = Math.floor(Math.random()*3) + 1;
         let randomNum2 = Math.floor(Math.random()*3) + 1;
@@ -1361,7 +1421,22 @@ function toggleOuterDialColorMiddleRight () {
 }
 
 
-
+function rotateRingTopLeft () {
+    let rotateValue = parseInt(document.getElementById("rotate-value-top-left").innerText); 
+    let topLeftDial = document.getElementById("top-row-left-dial");
+    if (rotateValue === 1) {
+        topLeftDial.style.transform = "rotate(90deg)";
+    } else if (rotateValue === 2) {
+        topLeftDial.style.transform = "rotate(180deg)";
+    } else if (rotateValue === 3) {
+        topLeftDial.style.transform = "rotate(270deg)";
+    } else if (rotateValue === 0) {
+        topLeftDial.style.transform = "rotate(0deg)";
+    } else {
+        console.log("fail");
+    }
+    
+}
 
 
 
@@ -1918,3 +1993,217 @@ function resetScore () {
     score8.innerText = "0";
     score9.innerText = "0";
 }
+
+
+
+// Testing !!!!!!!!!!!!!!!!! Center button
+// function incrementClicksTopLeft () {
+//     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left").innerText) ;
+//     let toggleButtonText = document.getElementById("toggle-button");
+
+//     if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
+//         document.getElementById("rotate-value-top-left").innerText = ++oldNumOfClicks;
+//     } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
+//         document.getElementById("rotate-value-top-left").innerText = 0;
+//     } 
+    
+// }
+
+
+// function incrementClicksTopLeftInnerDial () {
+//     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
+//     let toggleButtonText = document.getElementById("toggle-button");
+
+//     if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
+//         document.getElementById("rotate-value-top-left-inner-dial").innerText = ++oldNumOfClicks;
+//     } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") { 
+//         document.getElementById("rotate-value-top-left-inner-dial").innerText = 0;
+// }
+// }
+
+// function rotateRingTopLeftInnerDial () {
+//     let rotateValue = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText); 
+//     let topLeftDial = document.getElementById("top-row-left-inner-dial");
+//     let toggleButtonText = document.getElementById("toggle-button");
+
+//     if (rotateValue === 1) {
+//         topLeftDial.style.transform = "rotate(90deg)";
+//     } else if (rotateValue === 2) {
+//         topLeftDial.style.transform = "rotate(180deg)";
+//     } else if (rotateValue === 3) {
+//         topLeftDial.style.transform = "rotate(270deg)";
+//     } else if (rotateValue === 0) {
+//         topLeftDial.style.transform = "rotate(0deg)";
+//     } else {
+//         console.log("fail");
+//     }
+    
+// }
+
+function topLeftcenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("top-row-left-dial");
+    let innerRing = document.getElementById("top-row-left-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksTopLeftInnerDial ();
+        rotateRingTopLeftInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksTopLeft ();
+        rotateRingTopLeft ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function topMiddleCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("top-row-middle-dial");
+    let innerRing = document.getElementById("top-row-middle-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksTopMiddleInnerDial ();
+        rotateRingTopMiddleInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksTopMiddle ();
+        rotateRingTopMiddle ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function topRightCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("top-row-right-dial");
+    let innerRing = document.getElementById("top-row-right-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksTopRightInnerDial ();
+        rotateRingTopRightInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksTopRight ();
+        rotateRingTopRight ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function MiddleLeftCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("middle-row-left-dial");
+    let innerRing = document.getElementById("middle-row-left-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksMiddleLeftInnerDial ();
+        rotateRingMiddleLeftInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksMiddleLeft ();
+        rotateRingMiddleLeft ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function MiddleMiddleCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("middle-row-center-dial");
+    let innerRing = document.getElementById("middle-row-center-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksCenterInnerDial ();
+        rotateRingCenterInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksCenter();
+        rotateRingCenter ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function MiddleRightCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("middle-row-right-dial");
+    let innerRing = document.getElementById("middle-row-right-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksMiddleRightInnerDial ();
+        rotateRingMiddleRightInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksMiddleRight ();
+        rotateRingMiddleRight ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+
+function BottomLeftCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("bottom-row-left-dial");
+    let innerRing = document.getElementById("bottom-row-left-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksBottomLeftInnerDial ();
+        rotateRingBottomLeftInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksBottomLeft ();
+        rotateRingBottomLeft ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function BottomMiddleCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("bottom-row-center-dial");
+    let innerRing = document.getElementById("bottom-row-center-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksBottomMiddleInnerDial ();
+        rotateRingBottomMiddleInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksBottomMiddle ();
+        rotateRingBottomMiddle ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+function BottomRightCenterButton () {
+    let tButton = document.getElementById("toggle-button");
+    let outerRing = document.getElementById("bottom-row-right-dial");
+    let innerRing = document.getElementById("bottom-row-right-inner-dial");
+
+    if (tButton.innerText == "Activate Red") {
+        incrementClicksBottomRightInnerDial ();
+        rotateRingBottomRightInnerDial ();
+        innerRing.style.transition = " all 500ms"
+
+
+    } else {
+        incrementClicksBottomRight ();
+        rotateRingBottomRight ();
+        outerRing.style.transition = " all 500ms"
+    }
+}
+
+
+
+
+
