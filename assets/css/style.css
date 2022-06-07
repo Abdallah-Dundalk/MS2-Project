@@ -2,8 +2,7 @@
     display: grid;
 
     grid-template-columns: 33.333% 33.333% 33.333%;
-    grid-template-rows: 100px 100px 100px;
-    
+    grid-template-rows: 100px 100px 100px;    
 }
 
 .rows-container > div {   
@@ -37,6 +36,24 @@
     color: antiquewhite;
     font-size: 60px;
 }
+
+a {
+    height: 40px;
+    width: 30%;
+    margin: auto;
+    display:block;
+    float: right;
+    margin: 20px 10 20px 0%;
+    text-align: center;
+    line-height: 40px;
+    color: antiquewhite;
+    font-size: 40px;
+    text-decoration: none;
+    position: relative;
+    top: -147px;
+    text-align: center;
+}
+
 
 #timer {
 
@@ -266,6 +283,15 @@ body {
     background-color: black;
 }
 
+#instructions {
+    width: 80%;
+    font-size: 20px;
+    color: antiquewhite;
+    height: 800px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 @media only screen and (min-width: 600px) {
     #top-left {
@@ -396,14 +422,14 @@ body {
 
         .rows-container {
             position: relative;
-            top: -130px;
+            top: -170px;
         }
     
         #toggle-button {
             margin-top: 0;
             margin-bottom: 0;
             position: relative;
-            top: -100px;
+            top: -150px;
         }
 
         #score {
@@ -570,7 +596,7 @@ body {
         margin-top: 0;
         margin-bottom: 0;
         position: relative;
-        top: -75px;
+        top: -100px;
     }
 
     #game-area {
