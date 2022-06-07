@@ -487,32 +487,54 @@ body {
   @media only screen and (max-width: 600px) {
       #score {
         position: relative;
-        top:600px;
+        top:25px;
         font-size: 20px;
     }
     
     #timer {
     position: relative;
-    top:600px;
+    top:475px;
     font-size: 20px;
     width: 50%;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
     }
 
     #start-game {
         width: 100%;
         margin: 0 auto;
         position:relative;
-        top: -40px;
+        top: -110px;
         line-height: 40px;
         font-size: 40px;
     }
 
     #game-area {
         margin-top: 0px;
+        height: 400px;
     }
+
+    .rows-container {
+        position: relative;
+        top: -110px;
+    }
+
+    #toggle-button {
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        top: -75px;
+    }
+
+    #game-area {
+        margin-bottom: 0;
+    }
+
+
   }
 
-  @media only screen and (max-width: 1150px) {
+  /* @media only screen and (max-width: 1150px) {
     #score {
         font-size: 25px;
     }
@@ -520,4 +542,4 @@ body {
     #timer {
     font-size: 25px;
     }
-  }
+  } */
