@@ -371,7 +371,7 @@ body {
 
     #timer {
         position: relative;
-        top:800px;
+        top:770px;
         font-size: 40px;
         line-height: 40px;
         width: 50%;
@@ -384,38 +384,38 @@ body {
             width: 100%;
             margin: 0 auto;
             position:relative;
-            top: -85px;
+            top: -105px;
             line-height: 60px;
             font-size: 60px;
         }
 
         .rows-container {
             position: relative;
-            top: -100px;
+            top: -130px;
         }
     
         #toggle-button {
             margin-top: 0;
             margin-bottom: 0;
             position: relative;
-            top: -75px;
+            top: -100px;
         }
 
         #score {
             position: relative;
-            top: 70px;
+            top: 50px;
             font-size: 40px;
             line-height: 40px;
         }
 
         #game-over {
-            margin-top:300px;
+            margin-top:250px;
             position: relative; 
         }
   }
 
 
-  @media only screen and (min-width: 950px) {
+  /* @media only screen and (min-width: 950px) {
     #top-left {
         margin-top: 40px;
     }
@@ -454,16 +454,16 @@ body {
     #bottom-right {
         margin-top: 40px;
         margin-bottom: 20px;
-    }
+    } */
 
-    .rows-container {
+    /* .rows-container {
         display: grid;
         margin-top: 0px;
         grid-template-columns: 33.333% 33.333% 33.333%;
         grid-template-rows: 300px 300px 300px; 
-    }
+    } */
 
-    #game-over {
+    /* #game-over {
         margin-top: 675px;
     }
 
@@ -522,7 +522,8 @@ body {
         font-size: 60px;
     }
     
-  }
+  } */
+
 
   @media only screen and (max-width: 600px) {
       #score {
