@@ -237,8 +237,8 @@
     color:antiquewhite;
     font-weight: bolder;
     display: block;
-    backdrop-filter: blur(8px);
-    background: transparent;
+    /* backdrop-filter: blur(3px); */
+    /* background: transparent;  */
     text-align: center;
     height: 0px;
     width: 0px;
@@ -247,7 +247,42 @@
     position: relative;
     top: -800px;
     overflow: hidden;
+    line-height: 100px;
+    word-break: break-all;
+    background-image: url(/assets/images/woman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    filter:brightness(50%);
 }
+
+#game-over-text {
+    margin: 0 auto;
+    font-size: large;
+    color:antiquewhite;
+    font-weight: bolder;
+    display: block;
+    /* backdrop-filter: blur(3px); */
+    /* background: transparent;  */
+    text-align: center;
+    height: 0px;
+    width: 0px;
+    transition-property: all;
+    transition-duration: 1s;
+    position: relative;
+    top: -1200px;
+    /* overflow: hidden; */
+    line-height: 100px;
+    word-break: break-all;
+    position: relative;
+    z-index: 11;
+    /* background-image: url(/assets/images/woman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    filter:brightness(50%); */
+}
+
 
 #top-left {
     margin-top: 15px;
@@ -445,6 +480,8 @@ body {
         #game-over {
             margin-top:250px;
             position: relative; 
+            background-position-y: center;
+            background-position-x: center;
         }
 
        
@@ -628,8 +665,17 @@ body {
 
     #game-over {
         top: -450px;
+        background-position-y: center;
+        background-position-x: center;
+        word-break: break-word;
     }
 
+    #game-over-text {
+        top: -800px;
+        font-size: smaller;
+        line-height: 50px;
+    }
+    
 
   }
 

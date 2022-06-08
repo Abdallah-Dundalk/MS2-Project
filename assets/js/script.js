@@ -1526,15 +1526,7 @@ function parentCountdown () {
         let timerInterval = setInterval( countdown, 1000); 
     
         function countdown() {
-            // let topLeftCenterDial = document.getElementById("top-left-center-dial").style.backgroundColor;
-            // let topMiddleCenterDial = document.getElementById("top-middle-center-dial").style.backgroundColor;
-            // let topRightCenterDial = document.getElementById("top-right-center-dial").style.backgroundColor;
-            // let middleLeftCenterDial = document.getElementById("middle-left-center-dial").style.backgroundColor;
-            // let centerDial = document.getElementById("center-dial").style.backgroundColor;
-            // let middleRightCenterDial = document.getElementById("middle-right-center-dial").style.backgroundColor;
-            // let bottomLeftCenterDial = document.getElementById("bottom-left-center-dial").style.backgroundColor;
-            // let bottomMiddleCenterDial = document.getElementById("bottom-middle-center-dial").style.backgroundColor;
-            // let bottomRightCenterDial = document.getElementById("bottom-right-center-dial").style.backgroundColor;
+            
             let score = parseInt(document.getElementById("score").innerText); 
 
             if (timeRemaining <= -1) {
@@ -1548,7 +1540,7 @@ function parentCountdown () {
                 timeRemaining -= 1;
                 winRound ()
             } else {
-                timerElement.innerText = timeRemaining + " seconds until launch";
+                timerElement.innerText = timeRemaining + " seconds until launch...";
                 timeRemaining --;
         }
     }
@@ -1557,19 +1549,19 @@ function parentCountdown () {
 
 function gameOver () {
     let gameOver = document.getElementById("game-over");
-    gameOver.innerText = "Missiles Launched....Game Over"
-    gameOver.style.width = "80%"
-    gameOver.style.height = "600px"
-    // gameOver.style.top = "100px"
+    let gameOverText = document.getElementById("game-over-text");
+    gameOverText.innerHTML = `<h2>Missiles Launched</h2><h2>The AI has destroyed humanity</h2><h2>Game Over.</h2><h2>Press Start to play again.</h2>`;
+    gameOver.style.width = "80%";
+    gameOver.style.height = "600px";
+    gameOverText.style.width = "80%";
+    gameOverText.style.height = "600px";
 }
 
 function winRound () {
     let winRound = document.getElementById("game-over");
-    winRound.innerText = "Launch sequence disabled";
-    winRound.style.width = "80%"
-    winRound.style.height = "600px"
-    // winRound.style.top = "100px"
-    
+    winRound.innerText = "Launch sequence disabled!... you have saved the human race!... Press Start to play again!";
+    winRound.style.width = "80%";
+    winRound.style.height = "600px";
 }
 
 
