@@ -29,7 +29,7 @@
     width: 20%;
     margin: 30px auto;
     display:block;
-    float: left;
+    /* float: left; */
     margin: 20px 0 20px 10%;
     text-align: center;
     line-height: 60px;
@@ -47,7 +47,7 @@
     text-align: center;
     line-height: 200px;
     color: antiquewhite;
-    font-size: 50px;
+    font-size: 35px;
     text-decoration: none;
     position: relative;
     top: -50px;
@@ -66,7 +66,7 @@
     color: antiquewhite;
     font-size: 35px;
     position: relative;
-    top:0px
+    top: 70px
 }
 
 #game-area {
@@ -208,7 +208,7 @@
     color: black;
     background-color: blue;
     font-size: 16px;
-    z-index: 10;
+    z-index: 0;
     position: relative;
     border: black solid 1px;
     display: block;
@@ -234,11 +234,19 @@
 #game-over {
     margin: 0 auto;
     font-size: large;
-    color: red;
+    color:antiquewhite;
     font-weight: bolder;
     display: block;
-    background: yellow;
+    backdrop-filter: blur(8px);
+    background: transparent;
     text-align: center;
+    height: 0px;
+    width: 0px;
+    transition-property: all;
+    transition-duration: 1s;
+    position: relative;
+    top: -800px;
+    overflow: hidden;
 }
 
 #top-left {
@@ -335,7 +343,7 @@ body {
         grid-template-columns: 33.333% 33.333% 33.333%;
         grid-template-rows: 150px 150px 150px;
         position: relative;
-        top: -85px;
+        top: -30px;
     }
 
     #game-over {
@@ -414,7 +422,7 @@ body {
             width: 100%;
             margin: 0 auto 30px;
             position:relative;
-            top: -50px;
+            top: 10px;
             line-height: 60px;
             font-size: 60px;
         }
@@ -424,7 +432,7 @@ body {
             margin-top: 0;
             margin-bottom: 0;
             position: relative;
-            top: -70px;
+            top: -10px;
         }
 
         #score {
@@ -562,7 +570,7 @@ body {
     }
     
     #timer {
-    top: -40px;
+    top: -10px;
     font-size: 20px;
     width: 50%;
     margin: 0 auto;
@@ -571,10 +579,10 @@ body {
     }
 
     #start-game {
-        width: 100%;
+        /* width: 100%; */
         margin: 0 auto;
         position:relative;
-        top: -30px;
+        top: 10px;
         line-height: 40px;
         font-size: 40px;
     }
@@ -586,14 +594,14 @@ body {
 
     .rows-container {
         position: relative;
-        top: -40px;
+        /* top: -40px; */
     }
 
     #toggle-button {
         margin-top: 80px;
         margin-bottom: 0;
         position: relative;
-        top: -100px;
+        top: -70px;
     }
 
     #game-area {
@@ -616,6 +624,10 @@ body {
         top: -50px;
     
         text-align: center;
+    }
+
+    #game-over {
+        top: -450px;
     }
 
 

@@ -1090,7 +1090,6 @@ function matchingValuesBottomMiddle () {
 }
 }
 
-// you are working on this one!!!!!!!!
 function matchingValuesBottomRight () {
     let num1 = parseInt(document.getElementById("rotate-value-bottom-right").innerText);
     let num2 = parseInt(document.getElementById("random-num-bottom-right").innerText);
@@ -1327,21 +1326,6 @@ function toggleOuterDialColorTopRight () {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function toggleDialColorMiddleLeft () {
     let outerRing = document.getElementById("middle-row-left-dial");
     let innerRing = document.getElementById("middle-row-left-inner-dial")
@@ -1574,7 +1558,36 @@ function parentCountdown () {
 function gameOver () {
     let gameOver = document.getElementById("game-over");
     gameOver.innerText = "Missiles Launched....Game Over"
+    gameOver.style.width = "80%"
+    gameOver.style.height = "600px"
+    // gameOver.style.top = "100px"
 }
+
+function winRound () {
+    let winRound = document.getElementById("game-over");
+    winRound.innerText = "Launch sequence disabled";
+    winRound.style.width = "80%"
+    winRound.style.height = "600px"
+    // winRound.style.top = "100px"
+    
+}
+
+
+function resetGameOverAnimation () {
+    let gameOver = document.getElementById("game-over").style.width;
+    document.getElementById("game-over").style.height= "0px";
+    document.getElementById("game-over").style.width= "0px";
+    gameOver.innerText = " ";
+}
+
+
+
+function defaultGameStatusMessage () {
+   let defaultMessage = document.getElementById("game-over");
+   defaultMessage.innerText = " ";
+}
+
+
 
 function resetGame () {
     let randomNum1 = Math.floor(Math.random()*3) + 1;
@@ -1626,7 +1639,8 @@ function resetGame () {
         randomColorBottomRight ();
 
         test();
-        resetScore ()
+        resetScore ();
+        resetGameOverAnimation ();
 }
 
 function test () {
@@ -1703,17 +1717,7 @@ function test () {
     rotateRingBottomRightInnerDial ();
 }
 
-function winRound () {
-    let winRound = document.getElementById("game-over");
-    // let score =  document.getElementById("score");
-    winRound.innerText = "Launch sequence disabled";
-    // score.innerText = 1000;
-}
 
-function defaultGameStatusMessage () {
-   let defaultMessage = document.getElementById("game-over");
-   defaultMessage.innerText = " ";
-}
 
 
 // score 1
@@ -2201,9 +2205,7 @@ function BottomRightCenterButton () {
         rotateRingBottomRight ();
         outerRing.style.transition = " all 500ms"
     }
+
 }
 
-
-
-
-
+    
