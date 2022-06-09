@@ -2040,6 +2040,8 @@ function topLeftcenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("top-row-left-dial");
     let innerRing = document.getElementById("top-row-left-inner-dial");
+    
+
 
     if (tButton.innerText == "Activate Red") {
         incrementClicksTopLeftInnerDial ();
@@ -2058,6 +2060,7 @@ function topMiddleCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("top-row-middle-dial");
     let innerRing = document.getElementById("top-row-middle-inner-dial");
+
 
     if (tButton.innerText == "Activate Red") {
         incrementClicksTopMiddleInnerDial ();
@@ -2080,7 +2083,8 @@ function topRightCenterButton () {
     if (tButton.innerText == "Activate Red") {
         incrementClicksTopRightInnerDial ();
         rotateRingTopRightInnerDial ();
-        innerRing.style.transition = " all 500ms"
+        innerRing.style.transition = " all 500ms";
+
 
 
     } else {
@@ -2200,4 +2204,47 @@ function BottomRightCenterButton () {
 
 }
 
+
+
+let negativeButtonClick = new Audio();
+    negativeButtonClick.src ="negative.mp3";
+
+
+
+function correctSound() {
+let buttonClick = new Audio();
+    buttonClick.src ="buttonClick.mp3";
+    buttonClick.play();
+}
+
+function negativeSound() {
+    negativeButtonClick.play();
+}
+
+function toggleButtonSound(){
+    let toggleButtonClick = new Audio();
+    toggleButtonClick.src ="toggleButton.mp3";
+    toggleButtonClick.play();
+}
     
+
+function toggleSoundsTopLeftInnerDial () {
+    let tButton = document.getElementById("toggle-button");
+
+    if (tButton.innerText == "Activate Red") {
+        correctSound();
+    } else {
+        tButton.innerText = "Activate Blue";
+        negativeSound();
+    }
+}
+
+function centerButtonMouseDown() {
+    let centerButton = document.getElementById("top-left-center-dial");
+    centerButton.style.transform = "translateY(1px)";
+}
+
+function topLeftCenterMouseUp() {
+    let centerButton = document.getElementById("top-left-center-dial");
+    centerButton.style.transform = "translateY(-2px)";
+}

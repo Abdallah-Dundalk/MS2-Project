@@ -161,6 +161,13 @@
     bottom: 125px;    
 }
 
+/* #top-left-center-dial i:hover {
+    color: white;
+    text-shadow: 
+    0 0 7px white,
+    0 0 10px white,
+} */
+
 .outer-ring i {
     color: white;
     text-shadow: 
