@@ -539,7 +539,7 @@ video {
     }
     
     #timer {
-    top: -25px;
+    top: -1px;
     font-size: 20px;
     width: 50%;
     margin: 0 auto;
@@ -565,10 +565,10 @@ video {
     }
 
     #toggle-button {
-        margin-top: 80px;
+        
         margin-bottom: 0;
         position: relative;
-        top: -80px;
+        top: 0px;
     }
 
     #game-area {

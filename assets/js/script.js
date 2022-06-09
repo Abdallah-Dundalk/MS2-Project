@@ -1,3 +1,10 @@
+
+/**
+ * When page loads,clicking the outer dials will execute the functions for counting the number of clicks which will determine how many 90 degree rotations the ring will make.
+ * Each click will make the rings rotate 90 degrees.
+ * The score will update with each click if the updated rotation values match. Each ring has a roation value and if it matches the rotation value of thecenter ring, the score will increment.
+ * Each ring has ists on score that is summed to give the total score which is also updated on each click.
+ */
 addEventListener("DOMContentLoaded", function() {
     let outerRings = document.getElementsByClassName("outer-ring");
     for (let outerRing of outerRings) {
@@ -67,7 +74,9 @@ addEventListener("DOMContentLoaded", function() {
 })
 
 
-
+/**
+ * The below code does the same as the above code for the inner rings.
+ */
 addEventListener("DOMContentLoaded", function() {
     let middleRings = document.getElementsByClassName("middle-ring");
     for (let middleRing of middleRings) {
@@ -134,7 +143,7 @@ if (this.getAttribute("data-type")==="top-row-left-inner-dial") {
 })
 
 
-// center dails
+// calculates scores and rotates rings when buttons are pressed
 addEventListener("DOMContentLoaded", function() {
     let centerRings = document.getElementsByClassName("center-ring");
     for (let centerRing of centerRings) {
@@ -192,7 +201,7 @@ if (this.getAttribute("data-type")==="top-left-center-dial") {
 })
 
 
-
+// assigns random values for rotation functions and assigns random values for button colours
 addEventListener("DOMContentLoaded", function() {
         let randomNum1 = Math.floor(Math.random()*3) + 1;
         let randomNum2 = Math.floor(Math.random()*3) + 1;
@@ -257,7 +266,7 @@ addEventListener("DOMContentLoaded", function() {
     rotateCenterDialBottomRight ();
 })
 
-// Left Column
+// rotates inner ring depending on number of clicks incremented
 function rotateRingTopLeft () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-left").innerText); 
     let topLeftDial = document.getElementById("top-row-left-dial");
@@ -274,7 +283,7 @@ function rotateRingTopLeft () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingMiddleLeft () {
     let rotateValue = parseInt(document.getElementById("rotate-value-middle-left").innerText); 
     let topLeftDial = document.getElementById("middle-row-left-dial");
@@ -291,7 +300,7 @@ function rotateRingMiddleLeft () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingBottomLeft () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-left").innerText); 
     let topLeftDial = document.getElementById("bottom-row-left-dial");
@@ -308,7 +317,7 @@ function rotateRingBottomLeft () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksTopLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -320,7 +329,7 @@ function incrementClicksTopLeft () {
     } 
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksMiddleLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-left").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -331,9 +340,8 @@ function incrementClicksMiddleLeft () {
         document.getElementById("rotate-value-middle-left").innerText = 0;
     }
         
-    
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksBottomLeft () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-left").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -346,8 +354,7 @@ function incrementClicksBottomLeft () {
     
 }
 
-// Middle column
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingTopMiddle () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-middle").innerText); 
     let topLeftDial = document.getElementById("top-row-middle-dial");
@@ -364,7 +371,7 @@ function rotateRingTopMiddle () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingCenter () {
     let rotateValue = parseInt(document.getElementById("rotate-value-center").innerText); 
     let topLeftDial = document.getElementById("middle-row-center-dial");
@@ -381,7 +388,7 @@ function rotateRingCenter () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function rotateRingBottomMiddle () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-center").innerText); 
     let topLeftDial = document.getElementById("bottom-row-center-dial");
@@ -398,7 +405,7 @@ function rotateRingBottomMiddle () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksTopMiddle () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-middle").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -410,7 +417,7 @@ function incrementClicksTopMiddle () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksCenter () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-center").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -422,7 +429,7 @@ function incrementClicksCenter () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksBottomMiddle () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-center").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -434,8 +441,7 @@ function incrementClicksBottomMiddle () {
     }
 }
 
-// Right Column
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingTopRight () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-right").innerText); 
     let topLeftDial = document.getElementById("top-row-right-dial");
@@ -452,7 +458,7 @@ function rotateRingTopRight () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingMiddleRight () {
     let rotateValue = parseInt(document.getElementById("rotate-value-middle-right").innerText); 
     let topLeftDial = document.getElementById("middle-row-right-dial");
@@ -469,7 +475,7 @@ function rotateRingMiddleRight () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingBottomRight () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-right").innerText); 
     let topLeftDial = document.getElementById("bottom-row-right-dial");
@@ -486,7 +492,7 @@ function rotateRingBottomRight () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksTopRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-right").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -498,7 +504,7 @@ function incrementClicksTopRight () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksMiddleRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-right").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -510,7 +516,7 @@ function incrementClicksMiddleRight () {
     }
     
 }
-
+// increments number value to a max of 3 each time outer dial is clicked
 function incrementClicksBottomRight () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-right").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -523,9 +529,7 @@ function incrementClicksBottomRight () {
     
 }
 
-//inner dials
-
-// Left Column
+// rotates inner ring depending on number of clicks incremented
 function rotateRingTopLeftInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText); 
     let topLeftDial = document.getElementById("top-row-left-inner-dial");
@@ -544,7 +548,7 @@ function rotateRingTopLeftInnerDial () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingMiddleLeftInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-middle-left-inner-dial").innerText); 
     let topLeftDial = document.getElementById("middle-row-left-inner-dial");
@@ -561,7 +565,7 @@ function rotateRingMiddleLeftInnerDial () {
     }
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function rotateRingBottomLeftInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-left-inner-dial").innerText); 
     let topLeftDial = document.getElementById("bottom-row-left-inner-dial");
@@ -578,7 +582,7 @@ function rotateRingBottomLeftInnerDial () {
     }
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksTopLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -589,7 +593,7 @@ function incrementClicksTopLeftInnerDial () {
         document.getElementById("rotate-value-top-left-inner-dial").innerText = 0;
 }
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksMiddleLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-left-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -601,7 +605,7 @@ function incrementClicksMiddleLeftInnerDial () {
     }
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksBottomLeftInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-left-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -614,8 +618,8 @@ function incrementClicksBottomLeftInnerDial () {
     
 }
 
-// Middle column
 
+// rotates inner ring depending on number of clicks incremented
 function rotateRingTopMiddleInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-middle-inner-dial").innerText); 
     let topLeftDial = document.getElementById("top-row-middle-inner-dial");
@@ -632,7 +636,7 @@ function rotateRingTopMiddleInnerDial () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingCenterInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-center-inner-dial").innerText); 
     let topLeftDial = document.getElementById("middle-row-center-inner-dial");
@@ -649,7 +653,7 @@ function rotateRingCenterInnerDial () {
     }
     
 }
-
+// rotates inner ring depending on number of clicks incremented
 function rotateRingBottomMiddleInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-center-inner-dial").innerText); 
     let topLeftDial = document.getElementById("bottom-row-center-inner-dial");
@@ -666,7 +670,7 @@ function rotateRingBottomMiddleInnerDial () {
     }
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksTopMiddleInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-middle-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -678,7 +682,7 @@ function incrementClicksTopMiddleInnerDial () {
     }
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksCenterInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-center-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -690,7 +694,7 @@ function incrementClicksCenterInnerDial () {
     } 
     
 }
-
+// increments number value to a max of 3 each time inner dial is clicked
 function incrementClicksBottomMiddleInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-center-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -702,8 +706,8 @@ function incrementClicksBottomMiddleInnerDial () {
     } 
 }
 
-// Right Column
 
+// rotates iner ring depending on how many times its clicked
 function rotateRingTopRightInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-right-inner-dial").innerText); 
     let topLeftDial = document.getElementById("top-row-right-inner-dial");
@@ -720,7 +724,7 @@ function rotateRingTopRightInnerDial () {
     }
     
 }
-
+// rotates iner ring depending on how many times its clicked
 function rotateRingMiddleRightInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-middle-right-inner-dial").innerText); 
     let topLeftDial = document.getElementById("middle-row-right-inner-dial");
@@ -738,6 +742,7 @@ function rotateRingMiddleRightInnerDial () {
     
 }
 
+// rotates iner ring depending on how many times its clicked
 function rotateRingBottomRightInnerDial () {
     let rotateValue = parseInt(document.getElementById("rotate-value-bottom-right-inner-dial").innerText); 
     let topLeftDial = document.getElementById("bottom-row-right-inner-dial");
@@ -754,7 +759,7 @@ function rotateRingBottomRightInnerDial () {
     }
     
 }
-
+// increments number of times inner ring is clicked to a max of 3
 function incrementClicksTopRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-right-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -766,7 +771,7 @@ function incrementClicksTopRightInnerDial () {
     } 
     
 }
-
+// increments number of times inner ring is clicked to a max of 3
 function incrementClicksMiddleRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-middle-right-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -778,7 +783,7 @@ function incrementClicksMiddleRightInnerDial () {
     }
     
 }
-
+// increments number of times inner ring is clicked to a max of 3
 function incrementClicksBottomRightInnerDial () {
     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-bottom-right-inner-dial").innerText) ;
     let toggleButtonText = document.getElementById("toggle-button");
@@ -791,7 +796,7 @@ function incrementClicksBottomRightInnerDial () {
     
 }
 
-
+// rotates button depending on number value
 function rotateCenterDialTopLeft () {
     let rotateValue = parseInt(document.getElementById("random-num-top-left").innerText); 
     let topLeftDial = document.getElementById("top-left-center-dial");
@@ -808,7 +813,7 @@ function rotateCenterDialTopLeft () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialTopMiddle () {
     let rotateValue = parseInt(document.getElementById("random-num-top-middle").innerText); 
     let topLeftDial = document.getElementById("top-middle-center-dial");
@@ -825,7 +830,7 @@ function rotateCenterDialTopMiddle () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialTopRight () {
     let rotateValue = parseInt(document.getElementById("random-num-top-right").innerText); 
     let topLeftDial = document.getElementById("top-right-center-dial");
@@ -842,7 +847,7 @@ function rotateCenterDialTopRight () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialMiddleLeft () {
     let rotateValue = parseInt(document.getElementById("random-num-middle-left").innerText); 
     let topLeftDial = document.getElementById("middle-left-center-dial");
@@ -859,7 +864,7 @@ function rotateCenterDialMiddleLeft () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialMiddle () {
     let rotateValue = parseInt(document.getElementById("random-num-center").innerText); 
     let topLeftDial = document.getElementById("center-dial");
@@ -876,7 +881,7 @@ function rotateCenterDialMiddle () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialMiddleRight () {
     let rotateValue = parseInt(document.getElementById("random-num-middle-right").innerText); 
     let topLeftDial = document.getElementById("middle-right-center-dial");
@@ -893,7 +898,7 @@ function rotateCenterDialMiddleRight () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialBottomLeft () {
     let rotateValue = parseInt(document.getElementById("random-num-bottom-left").innerText); 
     let topLeftDial = document.getElementById("bottom-left-center-dial");
@@ -910,7 +915,7 @@ function rotateCenterDialBottomLeft () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialBottomMiddle () {
     let rotateValue = parseInt(document.getElementById("random-num-bottom-middle").innerText); 
     let topLeftDial = document.getElementById("bottom-middle-center-dial");
@@ -927,7 +932,7 @@ function rotateCenterDialBottomMiddle () {
     }
     
 }
-
+// rotates button depending on number value
 function rotateCenterDialBottomRight () {
     let rotateValue = parseInt(document.getElementById("random-num-bottom-right").innerText); 
     let topLeftDial = document.getElementById("bottom-right-center-dial");
@@ -945,7 +950,7 @@ function rotateCenterDialBottomRight () {
     
 }
 
-
+// changes colour of button to green if rings are aligned correctly
 function matchingValuesTopLeft () {
     let num1 = parseInt(document.getElementById("rotate-value-top-left").innerText);
     let num2 = parseInt(document.getElementById("random-num-top-left").innerText);
@@ -963,7 +968,7 @@ function matchingValuesTopLeft () {
         randomColorTopLeft ();
 }
 }
-
+// changes colour of button to green if rings are aligned correctly
 function matchingValuesTopMiddle () {
     let num1 = parseInt(document.getElementById("rotate-value-top-middle").innerText);
     let num2 = parseInt(document.getElementById("random-num-top-middle").innerText);
@@ -981,7 +986,7 @@ function matchingValuesTopMiddle () {
         randomColorTopMiddle ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesTopRight () {
     let num1 = parseInt(document.getElementById("rotate-value-top-right").innerText);
     let num2 = parseInt(document.getElementById("random-num-top-right").innerText);
@@ -999,7 +1004,7 @@ function matchingValuesTopRight () {
         randomColorTopRight ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesMiddleLeft () {
     let num1 = parseInt(document.getElementById("rotate-value-middle-left").innerText);
     let num2 = parseInt(document.getElementById("random-num-middle-left").innerText);
@@ -1017,7 +1022,7 @@ function matchingValuesMiddleLeft () {
         randomColorMiddleLeft ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesCenter () {
     let num1 = parseInt(document.getElementById("rotate-value-center").innerText);
     let num2 = parseInt(document.getElementById("random-num-center").innerText);
@@ -1035,7 +1040,7 @@ function matchingValuesCenter () {
         randomColorCenter ();
     }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesMiddleRight () {
     let num1 = parseInt(document.getElementById("rotate-value-middle-right").innerText);
     let num2 = parseInt(document.getElementById("random-num-middle-right").innerText);
@@ -1053,7 +1058,7 @@ function matchingValuesMiddleRight () {
         randomColorMiddleRight ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesBottomLeft () {
     let num1 = parseInt(document.getElementById("rotate-value-bottom-left").innerText);
     let num2 = parseInt(document.getElementById("random-num-bottom-left").innerText);
@@ -1071,7 +1076,7 @@ function matchingValuesBottomLeft () {
         randomColorBottomLeft ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesBottomMiddle () {
     let num1 = parseInt(document.getElementById("rotate-value-bottom-center").innerText);
     let num2 = parseInt(document.getElementById("random-num-bottom-middle").innerText);
@@ -1089,7 +1094,7 @@ function matchingValuesBottomMiddle () {
         randomColorBottomMiddle ();
 }
 }
-
+// chnages colour of button to green if rings are aligned correctly
 function matchingValuesBottomRight () {
     let num1 = parseInt(document.getElementById("rotate-value-bottom-right").innerText);
     let num2 = parseInt(document.getElementById("random-num-bottom-right").innerText);
@@ -1107,7 +1112,7 @@ function matchingValuesBottomRight () {
         randomColorBottomRight ();
 }
 }
-
+// changes colour of button depending on colour value
 function randomColorTopLeft () {
     let num1 = parseInt(document.getElementById("random-color-top-left").innerText);
     let innerDial = document.getElementById("top-left-center-dial");
@@ -1120,7 +1125,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 }  
-
+// changes colour of button depending on colour value
 function randomColorTopMiddle () {
     let num1 = parseInt(document.getElementById("random-color-top-middle").innerText);
     let innerDial = document.getElementById("top-middle-center-dial");
@@ -1133,7 +1138,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 }  
-
+// changes colour of button depending on colour value
 function randomColorTopRight () {
     let num1 = parseInt(document.getElementById("random-color-top-right").innerText);
     let innerDial = document.getElementById("top-right-center-dial");
@@ -1146,7 +1151,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 }  
-
+// changes colour of button depending on colour value
 function randomColorMiddleLeft () {
     let num1 = parseInt(document.getElementById("random-color-middle-left").innerText);
     let innerDial = document.getElementById("middle-left-center-dial");
@@ -1159,7 +1164,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 }  
-
+// changes colour of button depending on colour value
 function randomColorCenter () {
     let num1 = parseInt(document.getElementById("random-color-center").innerText);
     let innerDial = document.getElementById("center-dial");
@@ -1172,7 +1177,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 } 
-
+// changes colour of button depending on colour value
 function randomColorMiddleRight () {
     let num1 = parseInt(document.getElementById("random-color-middle-right").innerText);
     let innerDial = document.getElementById("middle-right-center-dial");
@@ -1185,7 +1190,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 } 
-
+// changes colour of button depending on colour value
 function randomColorBottomLeft () {
     let num1 = parseInt(document.getElementById("random-color-bottom-left").innerText);
     let innerDial = document.getElementById("bottom-left-center-dial");
@@ -1198,7 +1203,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 } 
-
+// changes colour of button depending on colour value
 function randomColorBottomMiddle () {
     let num1 = parseInt(document.getElementById("random-color-bottom-middle").innerText);
     let innerDial = document.getElementById("bottom-middle-center-dial");
@@ -1211,7 +1216,7 @@ if (num1 === 1) {
     innerDial.style.backgroundColor = "purple";
 }
 } 
-
+// changes colour of button depending on colour value
 function randomColorBottomRight () {
     let num1 = parseInt(document.getElementById("random-color-bottom-right").innerText);
     let innerDial = document.getElementById("bottom-right-center-dial");
@@ -1225,6 +1230,7 @@ if (num1 === 1) {
 }
 } 
 
+// changes inner text of toggle button 
 function toggleButton () {
     let tButton = document.getElementById("toggle-button");
 
@@ -1235,6 +1241,7 @@ function toggleButton () {
     }
 }
 
+// changes colour of toggle button 
 function toggleButtonColor () {
     let tButton = document.getElementById("toggle-button");
 
@@ -1247,7 +1254,6 @@ function toggleButtonColor () {
 
 
 // toggle Dial Colors
-
 function toggleDialColorTopLeft () {
     let outerRing = document.getElementById("top-row-left-dial");
     let innerRing = document.getElementById("top-row-left-inner-dial")
@@ -1273,8 +1279,7 @@ function toggleDialColorTopLeft () {
 
 }
 
-
-// bottom middle
+// rotates outer ring depending on how many times it is clicked
 function toggleDialColorTopMiddle () {
     let outerRing = document.getElementById("top-row-middle-dial");
     let innerRing = document.getElementById("top-row-middle-inner-dial")
@@ -1299,7 +1304,7 @@ function toggleDialColorTopMiddle () {
     }
 
 }
-
+// rotates outer ring depending on how many times it is clicked
 function toggleOuterDialColorTopRight () {
     let outerRing = document.getElementById("top-row-right-dial");
     let innerRing = document.getElementById("top-row-right-inner-dial")
@@ -1325,7 +1330,7 @@ function toggleOuterDialColorTopRight () {
 
 }
 
-
+// rotates outer ring depending on how many times it is clicked
 function toggleDialColorMiddleLeft () {
     let outerRing = document.getElementById("middle-row-left-dial");
     let innerRing = document.getElementById("middle-row-left-inner-dial")
@@ -1351,8 +1356,7 @@ function toggleDialColorMiddleLeft () {
 
 }
 
-
-// bottom middle
+// rotates outer ring depending on how many times it is clicked
 function toggleDialColorMiddleMiddle () {
     let outerRing = document.getElementById("middle-row-center-dial");
     let innerRing = document.getElementById("middle-row-center-inner-dial")
@@ -1378,7 +1382,7 @@ function toggleDialColorMiddleMiddle () {
 
 }
 
-// bottom right
+// rotates outer ring depending on how many times it is clicked
 function toggleOuterDialColorMiddleRight () {
     let outerRing = document.getElementById("middle-row-right-dial");
     let innerRing = document.getElementById("middle-row-right-inner-dial")
@@ -1404,7 +1408,7 @@ function toggleOuterDialColorMiddleRight () {
 
 }
 
-
+// rotates outer ring depending on how many times it is clicked
 function rotateRingTopLeft () {
     let rotateValue = parseInt(document.getElementById("rotate-value-top-left").innerText); 
     let topLeftDial = document.getElementById("top-row-left-dial");
@@ -1422,25 +1426,7 @@ function rotateRingTopLeft () {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// highlights or dulls outer dials depending on toggle buttons inner text value
 function toggleDialColorBottomLeft () {
     let outerRing = document.getElementById("bottom-row-left-dial");
     let innerRing = document.getElementById("bottom-row-left-inner-dial")
@@ -1467,7 +1453,7 @@ function toggleDialColorBottomLeft () {
 }
 
 
-// bottom middle
+// highlights or dulls outer dials depending on toggle buttons inner text value
 function toggleDialColorBottomMiddle () {
     let outerRing = document.getElementById("bottom-row-center-dial");
     let innerRing = document.getElementById("bottom-row-center-inner-dial")
@@ -1493,7 +1479,7 @@ function toggleDialColorBottomMiddle () {
 
 }
 
-// bottom right
+// highlights or dulls outer dials depending on toggle buttons inner text value
 function toggleOuterDialColor () {
     let outerRing = document.getElementById("bottom-row-right-dial");
     let innerRing = document.getElementById("bottom-row-right-inner-dial")
@@ -1519,6 +1505,7 @@ function toggleOuterDialColor () {
 
 }
 
+// settings for time. Displays win or lose message if time runs out or if game is won before timer runs out
 function parentCountdown () {
     let timeRemaining = 60;
     let timerElement = document.getElementById("timer");
@@ -1546,7 +1533,7 @@ function parentCountdown () {
     }
 }
 
-
+// displays message when game is lost
 function gameOver () {
     let gameOver = document.getElementById("game-over");
     let gameOverText = document.getElementById("game-over-text");
@@ -1557,6 +1544,7 @@ function gameOver () {
     gameOverText.style.height = "600px";
 }
 
+//displays message when game is won
 function winRound () {
     let gameOver = document.getElementById("game-over");
     let gameOverText = document.getElementById("game-over-text");
@@ -1567,7 +1555,7 @@ function winRound () {
     gameOverText.style.height = "600px";
 }
 
-
+// minimises and resets game over animation
 function resetGameOverAnimation () {
     let gameOver = document.getElementById("game-over").style.width;
     let gameOverInnerText = document.getElementById("game-over-text").style.width;
@@ -1577,18 +1565,17 @@ function resetGameOverAnimation () {
     document.getElementById("game-over-text").innerText= " "
     document.getElementById("game-over").style.height= "0px";
     document.getElementById("game-over").style.width= "0px";
-    // gameOver.innerText = " ";
 }
 
 
-
+//sets game over message to blank
 function defaultGameStatusMessage () {
    let defaultMessage = document.getElementById("game-over");
    defaultMessage.innerText = " ";
 }
 
 
-
+// resets scores, reassigns random values for rotatin gbuttons and assigning colour values and minimises game over message
 function resetGame () {
     let randomNum1 = Math.floor(Math.random()*3) + 1;
         let randomNum2 = Math.floor(Math.random()*3) + 1;
@@ -1720,7 +1707,7 @@ function test () {
 
 
 
-// score 1
+// increments score if button turns green, esle any other colour will deducted points from score
 function score () {
     
     let topLeftCenterDial = document.getElementById("top-left-center-dial"); 
@@ -1733,13 +1720,13 @@ function score () {
         decreaseScore ()
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore () {
     let oldScore = parseInt(document.getElementById("score-1").innerText);
     document.getElementById("score-1").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore () {
     let oldScore = parseInt(document.getElementById("score-1").innerText);
     if (oldScore >= 1) {
@@ -1747,7 +1734,7 @@ function decreaseScore () {
     }
 }
     
-// score 2
+// increments score if button turns green, esle any other colour will deducted points from score
 function score2 () {
     
     let topMiddleCenterDial = document.getElementById("top-middle-center-dial");
@@ -1760,13 +1747,13 @@ function score2 () {
     }
 }
 
-
+// increments score if rings are correctly aligned
 function incrementScore2 () {
     let oldScore = parseInt(document.getElementById("score-2").innerText);
     document.getElementById("score-2").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore2 () {
     let oldScore = parseInt(document.getElementById("score-2").innerText);
     if (oldScore >= 1) {
@@ -1774,7 +1761,7 @@ function decreaseScore2 () {
     }
 }
 
-// score 3
+// increments score if button turns green, esle any other colour will deducted points from score
 function score3 () {
     
     let topRightCenterDial = document.getElementById("top-right-center-dial");
@@ -1786,13 +1773,13 @@ function score3 () {
         decreaseScore3 ()
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore3 () {
     let oldScore = parseInt(document.getElementById("score-3").innerText);
     document.getElementById("score-3").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore3 () {
     let oldScore = parseInt(document.getElementById("score-3").innerText);
     if (oldScore >= 1) {
@@ -1801,7 +1788,7 @@ function decreaseScore3 () {
 }
 
 
-// score 4
+// increments score if button turns green, esle any other colour will deducted points from score
 function score4 () {
     
     let middleLeftCenterDial = document.getElementById("middle-left-center-dial");
@@ -1813,13 +1800,13 @@ function score4 () {
         decreaseScore4 ()
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore4 () {
     let oldScore = parseInt(document.getElementById("score-4").innerText);
     document.getElementById("score-4").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore4 () {
     let oldScore = parseInt(document.getElementById("score-4").innerText);
     if (oldScore >= 1) {
@@ -1827,9 +1814,7 @@ function decreaseScore4 () {
     }
 }
 
-
-
-// score 5
+// increments score if button turns green, esle any other colour will deducted points from score
 function score5 () {
     
     let CenterDial = document.getElementById("center-dial");
@@ -1842,12 +1827,13 @@ function score5 () {
     }
 }
 
+// increments score if rings are correctly aligned
 function incrementScore5 () {
     let oldScore = parseInt(document.getElementById("score-5").innerText);
     document.getElementById("score-5").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore5 () {
     let oldScore = parseInt(document.getElementById("score-5").innerText);
     if (oldScore >= 1) {
@@ -1856,7 +1842,7 @@ function decreaseScore5 () {
 }
 
 
-// score 6
+// increments score if button turns green, esle any other colour will deducted points from score
 function score6 () {
     
     let middleRightCenterDial = document.getElementById("middle-right-center-dial");
@@ -1868,13 +1854,13 @@ function score6 () {
         decreaseScore6 ();
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore6 () {
     let oldScore = parseInt(document.getElementById("score-6").innerText);
     document.getElementById("score-6").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore6 () {
     let oldScore = parseInt(document.getElementById("score-6").innerText);
     if (oldScore >= 1) {
@@ -1883,7 +1869,7 @@ function decreaseScore6 () {
 }
 
 
-// score 7
+// increments score if button turns green, esle any other colour will deducted points from score
 function score7 () {
     
     let bottomLeftCenterDial = document.getElementById("bottom-left-center-dial");
@@ -1895,13 +1881,13 @@ function score7 () {
         decreaseScore7 ();
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore7 () {
     let oldScore = parseInt(document.getElementById("score-7").innerText);
     document.getElementById("score-7").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore7 () {
     let oldScore = parseInt(document.getElementById("score-7").innerText);
     if (oldScore >= 1) {
@@ -1909,7 +1895,7 @@ function decreaseScore7 () {
     }
 }
 
-// score 8
+// increments score if button turns green, esle any other colour will deducted points from score
 function score8 () {
     
     let bottomMiddleCenterDial = document.getElementById("bottom-middle-center-dial");
@@ -1921,13 +1907,13 @@ function score8 () {
         decreaseScore8 ();
     }
 }
-
+// increments score if rings are correctly aligned
 function incrementScore8 () {
     let oldScore = parseInt(document.getElementById("score-8").innerText);
     document.getElementById("score-8").innerText += 1000;
 
 }
-
+// decreases score if rings are not correctly aligned
 function decreaseScore8 () {
     let oldScore = parseInt(document.getElementById("score-8").innerText);
     if (oldScore >= 1) {
@@ -1935,7 +1921,7 @@ function decreaseScore8 () {
     }
 }
 
-// score 9
+// increments score if button turns green, esle any other colour will deducted points from score
 function score9 () {
     
     let bottomRightCenterDial = document.getElementById("bottom-right-center-dial");
@@ -1948,12 +1934,14 @@ function score9 () {
     }
 }
 
+// increments score if rings are correctly aligned
 function incrementScore9 () {
     let oldScore = parseInt(document.getElementById("score-9").innerText);
     document.getElementById("score-9").innerText += 1000;
 
 }
 
+// decreases score if rings are not correctly aligned
 function decreaseScore9 () {
     let oldScore = parseInt(document.getElementById("score-9").innerText);
     if (oldScore >= 1) {
@@ -1961,6 +1949,7 @@ function decreaseScore9 () {
     }
 }
 
+//sums score of each set off rings to give total score
 function totalScore () {
     let score1 = parseInt(document.getElementById("score-1").innerText); 
     let score2 = parseInt(document.getElementById("score-2").innerText); 
@@ -1974,6 +1963,7 @@ function totalScore () {
     document.getElementById("score").innerText = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + ".pts";
 }
 
+// resets game score
 function resetScore () {
     let totalScore = document.getElementById("score");
     let score1 = document.getElementById("score-1");
@@ -1998,52 +1988,7 @@ function resetScore () {
     score9.innerText = "0";
 }
 
-
-
-// Testing !!!!!!!!!!!!!!!!! Center button
-// function incrementClicksTopLeft () {
-//     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left").innerText) ;
-//     let toggleButtonText = document.getElementById("toggle-button");
-
-//     if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Blue") {
-//         document.getElementById("rotate-value-top-left").innerText = ++oldNumOfClicks;
-//     } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Blue") {
-//         document.getElementById("rotate-value-top-left").innerText = 0;
-//     } 
-    
-// }
-
-
-// function incrementClicksTopLeftInnerDial () {
-//     let oldNumOfClicks = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText) ;
-//     let toggleButtonText = document.getElementById("toggle-button");
-
-//     if (oldNumOfClicks <= 2 && toggleButtonText.innerText == "Activate Red") {
-//         document.getElementById("rotate-value-top-left-inner-dial").innerText = ++oldNumOfClicks;
-//     } else if (oldNumOfClicks <= 3 && toggleButtonText.innerText == "Activate Red") { 
-//         document.getElementById("rotate-value-top-left-inner-dial").innerText = 0;
-// }
-// }
-
-// function rotateRingTopLeftInnerDial () {
-//     let rotateValue = parseInt(document.getElementById("rotate-value-top-left-inner-dial").innerText); 
-//     let topLeftDial = document.getElementById("top-row-left-inner-dial");
-//     let toggleButtonText = document.getElementById("toggle-button");
-
-//     if (rotateValue === 1) {
-//         topLeftDial.style.transform = "rotate(90deg)";
-//     } else if (rotateValue === 2) {
-//         topLeftDial.style.transform = "rotate(180deg)";
-//     } else if (rotateValue === 3) {
-//         topLeftDial.style.transform = "rotate(270deg)";
-//     } else if (rotateValue === 0) {
-//         topLeftDial.style.transform = "rotate(0deg)";
-//     } else {
-//         console.log("fail");
-//     }
-    
-// }
-
+// rotates rings when button is clicked
 function topLeftcenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("top-row-left-dial");
@@ -2064,6 +2009,7 @@ function topLeftcenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function topMiddleCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("top-row-middle-dial");
@@ -2083,6 +2029,7 @@ function topMiddleCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function topRightCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("top-row-right-dial");
@@ -2102,6 +2049,7 @@ function topRightCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function MiddleLeftCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("middle-row-left-dial");
@@ -2120,6 +2068,7 @@ function MiddleLeftCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function MiddleMiddleCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("middle-row-center-dial");
@@ -2138,6 +2087,7 @@ function MiddleMiddleCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function MiddleRightCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("middle-row-right-dial");
@@ -2156,7 +2106,7 @@ function MiddleRightCenterButton () {
     }
 }
 
-
+// rotates rings when button is clicked
 function BottomLeftCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("bottom-row-left-dial");
@@ -2175,6 +2125,7 @@ function BottomLeftCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function BottomMiddleCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("bottom-row-center-dial");
@@ -2193,6 +2144,7 @@ function BottomMiddleCenterButton () {
     }
 }
 
+// rotates rings when button is clicked
 function BottomRightCenterButton () {
     let tButton = document.getElementById("toggle-button");
     let outerRing = document.getElementById("bottom-row-right-dial");
@@ -2212,47 +2164,9 @@ function BottomRightCenterButton () {
 
 }
 
-
-
-let negativeButtonClick = new Audio();
-    negativeButtonClick.src ="negative.mp3";
-
-
-
+// plays sound when buttons are clicked
 function correctSound() {
 let buttonClick = new Audio();
     buttonClick.src ="buttonClick.mp3";
     buttonClick.play();
 }
-
-function negativeSound() {
-    negativeButtonClick.play();
-}
-
-function toggleButtonSound(){
-    let toggleButtonClick = new Audio();
-    toggleButtonClick.src ="toggleButton.mp3";
-    toggleButtonClick.play();
-}
-    
-
-function toggleSoundsTopLeftInnerDial () {
-    let tButton = document.getElementById("toggle-button");
-
-    if (tButton.innerText == "Activate Red") {
-        correctSound();
-    } else {
-        tButton.innerText = "Activate Blue";
-        negativeSound();
-    }
-}
-
-// function centerButtonMouseDown() {
-//     let centerButton = document.getElementById("top-left-center-dial");
-//     centerButton.style.transform = "translateY(1px)";
-// }
-
-// function topLeftCenterMouseUp() {
-//     let centerButton = document.getElementById("top-left-center-dial");
-//     centerButton.style.transform = "translateY(-2px)";
-// }
