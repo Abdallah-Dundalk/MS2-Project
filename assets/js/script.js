@@ -1570,9 +1570,14 @@ function winRound () {
 
 function resetGameOverAnimation () {
     let gameOver = document.getElementById("game-over").style.width;
+    let gameOverInnerText = document.getElementById("game-over-text").style.width;
+    document.getElementById("game-over-text").style.height= "0px";
+    document.getElementById("game-over-text").style.width= "0px";
+    gameOverInnerText.innerText = " ";
+    document.getElementById("game-over-text").innerText= " "
     document.getElementById("game-over").style.height= "0px";
     document.getElementById("game-over").style.width= "0px";
-    gameOver.innerText = " ";
+    // gameOver.innerText = " ";
 }
 
 

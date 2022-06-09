@@ -7,27 +7,230 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     
-    <title>Safe Crackin Wise Guy</title>
+    <title>One Minute to Midnight</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Back to Game</a>
+            <a id= "page-2-link" href="index.html">Exit</a>
         </nav>
-    </header>  
+    </header>
+    <div id="score">0.pts</div>
+   
+    <div id="start-game">Start</div>
+    
+    <a href="index.html" class="active"></a>
   
-    <div id="instructions">
-       <h1>How to Play</h1>
-       <p>This game consists of 9 buttons, each button surronded with two rings, an inner and outer ring. The goal of the game is to rotate each ring until it aligns with the direction indicated by the arrow on the the button at the center of the rings. Also, the ring that is aligned to the direction of the button, must match the colour. So if the button is red and pointing right, you must align the red ring so that its arrow is facing the buttons arrow. You can only move one ring at a time. You must toggle between controlling the red or blue rings by pressing the toggle button which will chnage colour to indicate which colour ring you have activated and can now control. If the button is purple, you must align both the red and the blue ring to the buttons arrow. If both rings have the same alignment to teh buttons arrow, but the buttons colour is not purple, the orientation of the rigns is not correct and no points are scored. When teh rings are correctly aligned, the button will change green and you will score 1000 pts. When all buttons are green, you have won. You must turn all buttons green before the timer runs out. You have 60 seconds to win the game. If the timer runs out, you lose. To play, simply press "Start" and have fun! </p>
-       <h2>Controls</h2>
+    <div id="game-area">
+        <!-- top row of dials -->
+
+        <div class="rows-container">
+            <div onclick="correctSound()" id="top-left" class="top-row" class="dial">
+                <div data-type="top-row-left-dial"  id="top-row-left-dial" class="outer-ring">
+                    <i id="top-left-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="top-row-left-inner-dial" data-type="top-row-left-inner-dial" class="middle-ring">
+                    <i id="top-left-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div onmousedown="centerButtonMouseDown()" onmouseup="topLeftCenterMouseUp()" id="top-left-center-dial" data-type="top-left-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="top-right" class="top-row" class="dial">
+                <div id="top-row-right-dial" data-type="top-row-right-dial"  class="outer-ring">
+                    <i id="top-right-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="top-row-right-inner-dial" data-type="top-row-right-inner-dial" class="middle-ring">
+                    <i id="top-right-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="top-right-center-dial" data-type="top-right-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="top-middle" class="top-row" class="dial">
+                <div id="top-row-middle-dial" data-type="top-row-middle-dial" class="outer-ring">
+                    <i id="top-center-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="top-row-middle-inner-dial" data-type="top-row-middle-inner-dial" class="middle-ring">
+                    <i id="top-center-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="top-middle-center-dial" data-type="top-middle-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+
+        
+
+            <!-- Middle row of dials -->
+
+        
+            <div onclick="correctSound()" id="middle-left" class="middle-row"  class="dial">
+                <div id="middle-row-left-dial" data-type="middle-row-left-dial" class="outer-ring">
+                    <i id="middle-left-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="middle-row-left-inner-dial" id="middle-row-left-inner-dial" class="middle-ring">
+                    <i id="middle-left-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="middle-left-center-dial" data-type="middle-left-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="middle-middle" class="middle-row" class="dial">
+                <div id="middle-row-center-dial" data-type="middle-row-center-dial"  class="outer-ring">
+                    <i id="middle-center-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="middle-row-center-inner-dial" id="middle-row-center-inner-dial" class="middle-ring">
+                    <i id="middle-center-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="center-dial" data-type="center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="middle-right" class="middle-row" class="dial">
+                <div id="middle-row-right-dial" data-type="middle-row-right-dial" class="outer-ring">
+                    <i id="middle-right-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="middle-row-right-inner-dial" id="middle-row-right-inner-dial" class="middle-ring">
+                    <i id="middle-right-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="middle-right-center-dial" data-type="middle-right-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+        
+
+            <!-- Bottom row of dials -->
+
+            
+            <div onclick="correctSound()" id="bottom-left" class="bottom-row"  class="dial">
+                <div id="bottom-row-left-dial" data-type="bottom-row-left-dial" class="outer-ring">
+                    <i id="bottom-left-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="bottom-row-left-inner-dial" id="bottom-row-left-inner-dial" class="middle-ring">
+                    <i id="bottom-left-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="bottom-left-center-dial" data-type="bottom-left-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="bottom-middle" class="bottom-row" class="dial">
+                <div id="bottom-row-center-dial" data-type="bottom-row-center-dial"  class="outer-ring">
+                    <i id="bottom-center-outer-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="bottom-row-center-inner-dial" id="bottom-row-center-inner-dial" class="middle-ring">
+                    <i id=bottom-center-inner-icon class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="bottom-middle-center-dial" data-type="bottom-middle-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div onclick="correctSound()" id="bottom-right" class="bottom-row" class="dial">
+                <div id="bottom-row-right-dial" data-type="bottom-row-right-dial" class="outer-ring">
+                    <i id="bottom-right-outer-icon"  class="fas fa-angle-down"></i>
+                </div>
+
+                <div data-type="bottom-row-right-inner-dial" id="bottom-row-right-inner-dial" class="middle-ring">
+                    <i  id="bottom-right-inner-icon" class="fas fa-angle-down"></i>
+                </div>
+
+                <div id="bottom-right-center-dial" data-type="bottom-right-center-dial" class="center-ring">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </div>
+        </div>
+
+        <span onclick="correctSound(); toggleButton (); toggleButtonColor ();toggleOuterDialColorTopRight (); toggleDialColorTopMiddle (); toggleDialColorTopLeft (); toggleOuterDialColorMiddleRight (); toggleDialColorMiddleMiddle (); toggleDialColorMiddleLeft (); toggleDialColorBottomLeft (); toggleDialColorBottomMiddle (); toggleOuterDialColor ()"  id="toggle-button">Activate Red</span>
+        
     </div>
+    <div id="timer">60 seconds until launch</div>
+    <div id="game-over">
+    </div>
+    <div id="game-over-text">
+    </div>
+    <div class="hide" id="new-game">New Game</div>  
 
-    <video width="1280" height="720" controls>
-        <source src="LastOne.mp4" type="video/mp4">
-      </video>
-    
     
 
+    <span class="rotation-values" id="rotate-value-top-left">0</span>
+    <span class="rotation-values" id="rotate-value-middle-left">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-left">0</span>
+    <span class="rotation-values" id="rotate-value-top-middle">0</span>
+    <span class="rotation-values" id="rotate-value-center">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-center">0</span>
+    <span class="rotation-values" id="rotate-value-top-right">0</span>
+    <span class="rotation-values" id="rotate-value-middle-right">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-right">0</span>
+    <br>
+    <span class="rotation-values" id="rotate-value-top-left-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-middle-left-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-left-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-top-middle-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-center-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-center-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-top-right-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-middle-right-inner-dial">0</span>
+    <span class="rotation-values" id="rotate-value-bottom-right-inner-dial">0</span>
+
+    <span class="hide" id="random-num-top-left">""</span>
+    <span class="hide" id="random-num-middle-left">0</span>
+    <span class="hide" id="random-num-bottom-left">0</span>
+    <span class="hide" id="random-num-top-middle">0</span>
+    <span class="hide" id="random-num-center">0</span>
+    <span class="hide" id="random-num-bottom-middle">0</span>
+    <span class="hide" id="random-num-top-right">0</span>
+    <span class="hide" id="random-num-middle-right">0</span>
+    <span class="hide" id="random-num-bottom-right">0</span>
+
+    <span class="hide" id="random-color-top-left">""</span>
+    <span class="hide" id="random-color-middle-left">0</span>
+    <span class="hide" id="random-color-bottom-left">0</span>
+    <span class="hide" id="random-color-top-middle">0</span>
+    <span class="hide" id="random-color-center">0</span>
+    <span class="hide" id="random-color-bottom-middle">0</span>
+    <span class="hide" id="random-color-top-right">0</span>
+    <span class="hide" id="random-color-middle-right">0</span>
+    <span class="hide" id="random-color-bottom-right">0</span>
+
+
+    <span class="hide" id="score-1">0</span>
+    <span class="hide" id="score-2">0</span>
+    <span class="hide" id="score-3">0</span>
+    <span class="hide" id="score-4">0</span>
+    <span class="hide" id="score-5">0</span>
+    <span class="hide" id="score-6">0</span>
+    <span class="hide" id="score-7">0</span>
+    <span class="hide" id="score-8">0</span>
+    <span class="hide" id="score-9">0</span>
+
+    
+    <footer>
+        <div id="copyright-text">Copyright<i class="fa-regular fa-copyright"></i> 2022 All Rights Reserved by Abdallah Ahmed.</div>
+    </footer>
+     <!--fontawesome script-->
+     <script src="https://kit.fontawesome.com/cccfe2d0bf.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

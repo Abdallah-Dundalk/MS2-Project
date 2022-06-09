@@ -7,11 +7,16 @@
 
 body {
     background-color: black;
+    color: antiquewhite;
 }
 
 .rows-container > div {   
     width: 100%;
     place-items: center center;
+}
+#nuke {
+    font-size: 100px;
+    color: antiquewhite;
 }
 
 #score {
@@ -33,13 +38,41 @@ body {
     width: 20%;
     margin: 30px auto;
     display:block;
-    /* float: left; */
     margin: 20px 0 20px 10%;
     text-align: center;
     line-height: 60px;
     color: antiquewhite;
     font-size: 60px;
     position: absolute;
+}
+
+#back-link nav a {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    text-align: right;
+    line-height: 40px;
+    font-size: 40px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+#back-link {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10%;
+    float: right;
+    clear: both;
+    width: 100%;
+    text-align: right;
+}
+
+.rotation-values {
+    display: none;
+}
+
+.hide {
+    display: none;
 }
 
 #page-2-link {
@@ -57,13 +90,11 @@ body {
     position: relative;
     z-index: 9;
     top: -50px;
-
     text-align: center;
 }
 
 
 #timer {
-
     margin: 20px 5% 20px 0;
     display: block;
     height: 60px;
@@ -76,7 +107,6 @@ body {
 }
 
 #game-area {
-    /* background: rgb(28, 1, 34); */
     width: 80%;
     height: 450px;
     margin-left: 10%;
@@ -87,17 +117,13 @@ body {
     clear: both;
     z-index: -1;
     box-sizing: border-box;
-    
 }
 
 .dial {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    
 }
-
-
 
 .outer-ring {
     
@@ -116,13 +142,11 @@ body {
     text-align: center;
     box-sizing: border-box;
     margin: 0 auto;
-    /* background-color: black; */
 }
 
 
 
 .outer-ring:hover {
-    
     transition-duration: 500ms;
     transition-property: all;
 }
@@ -152,13 +176,11 @@ body {
 }
 
 .middle-ring:hover {
-    
     transition-duration: 500ms;
     transition-property: all;
 }
 
 .center-ring {
-    
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -169,13 +191,6 @@ body {
     bottom: 125px;    
 }
 
-/* #top-left-center-dial i:hover {
-    color: white;
-    text-shadow: 
-    0 0 7px white,
-    0 0 10px white,
-} */
-
 .outer-ring i {
     color: white;
     text-shadow: 
@@ -184,7 +199,6 @@ body {
     0 0 21px red,
     0 0 42px red,
     0 0 82px red;
-                
     text-align: center;
     position: relative;
     margin-left: -1px;
@@ -209,7 +223,6 @@ body {
 .center-ring i {
     color: black;
     text-align: center;
-   
     position: relative;
     top: -1px;
     font-size: xx-large;
@@ -239,21 +252,12 @@ body {
     float: right;
 }
 
-/* #new-game {
-    background-color: red;
-    height: 50px;
-    width: 50px;
-    margin: 30px auto;
-} */
-
 #game-over {
     margin: 0 auto;
     font-size: large;
     color:antiquewhite;
     font-weight: bolder;
     display: block;
-    /* backdrop-filter: blur(3px); */
-    /* background: transparent;  */
     text-align: center;
     height: 0px;
     width: 0px;
@@ -277,8 +281,6 @@ body {
     color:antiquewhite;
     font-weight: bolder;
     display: block;
-    /* backdrop-filter: blur(3px); */
-    /* background: transparent;  */
     text-align: center;
     height: 0px;
     width: 0px;
@@ -286,18 +288,11 @@ body {
     transition-duration: 1s;
     position: relative;
     top: -1200px;
-    /* overflow: hidden; */
     line-height: 100px;
     word-break: break-all;
     position: relative;
     z-index: 11;
-    /* background-image: url(/assets/images/woman.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-filter: brightness(50%);
-    filter:brightness(50%); */
 }
-
 
 #top-left {
     margin-top: 15px;
@@ -323,7 +318,6 @@ body {
     margin-top: 15px;
 }
 
-
 #bottom-left {
     margin-top: 15px;
 }
@@ -337,17 +331,41 @@ body {
 }
 
 body {
-    /* background-color: black; */
+    background-color: black;
 }
 
-#instructions {
+.instructions {
     width: 80%;
     font-size: 20px;
     color: antiquewhite;
-    height: 800px;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    text-align: center;
+    background-color: dimgrey;
+    border: 1px solid darkslategray;
+    height: 30px;
+    line-height: 30px;
+    position:relative;
+    bottom:0;
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+}
+
+video {
+    width: 500px;
+    height: auto;
+    clear: both;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -407,7 +425,6 @@ body {
         border-radius: 50%;
     }
     
-
     .outer-ring {
         
         width: 120px;
@@ -469,7 +486,6 @@ body {
         }
 
         #start-game {
-            /* width: 100%; */
             margin: 0 auto 30px;
             position:relative;
             top: 10px;
@@ -477,7 +493,6 @@ body {
             font-size: 60px;
         }
 
-    
         #toggle-button {
             margin-top: 0;
             margin-bottom: 0;
@@ -499,40 +514,10 @@ body {
             background-position-x: center;
         }
 
-       
   }
 
 
-  /* @media only screen and (min-width: 950px) {
-    #top-left {
-        margin-top: 40px;
-    }
-    
-    #top-middle {
-        margin-top: 40px;
-    }
-    
-    #top-right {
-        margin-top: 40px;
-    }
-    
-    #middle-left {
-        margin-top: 40px;
-    }
-    
-    #middle-middle {
-        margin-top: 40px;
-    }
-    
-    #middle-right {
-        margin-top: 60px;
-    }
-    
-    
-    #bottom-left {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
+  
     
     #bottom-middle {
         margin-top: 40px;
@@ -542,76 +527,7 @@ body {
     #bottom-right {
         margin-top: 40px;
         margin-bottom: 20px;
-    } */
-
-    /* .rows-container {
-        display: grid;
-        margin-top: 0px;
-        grid-template-columns: 33.333% 33.333% 33.333%;
-        grid-template-rows: 300px 300px 300px; 
-    } */
-
-    /* #game-over {
-        margin-top: 675px;
-    }
-
-    #toggle-button {
-        margin: 0 auto;
-        margin-top: 40px;
-    }
-
-    .outer-ring {
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        overflow: hidden;   
-        position: relative;
-        text-align: center;
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
-        
-    .middle-ring {
-        width: 150px;
-        height: 150px;
-        margin: 10px auto;
-        overflow: hidden;
-        text-align: center;
-        position: relative;
-        bottom:195px;
-        box-sizing: border-box;
-    }
-        
-    .center-ring {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin: 10px auto;
-        overflow: hidden;
-        text-align: center;
-        position: relative;
-        bottom: 320px;    
-    }
-
-    .outer-ring i {
-        margin-left: -1px;
-        bottom: 6px;
-        font-size: 30px;
-    }
-    
-    .middle-ring i {
-        margin-left: -1px;
-        bottom: 5px;
-        font-size: 30px;
-    }
-    
-    .center-ring i {
-        top: 7px;
-        font-size: 60px;
-    }
-    
-  } */
-
+    } 
 
   @media only screen and (max-width: 600px) {
       #score {
@@ -619,10 +535,11 @@ body {
         top:20px;
         font-size: 20px;
         height: 40px;
+        width: 20%
     }
     
     #timer {
-    top: -10px;
+    top: -25px;
     font-size: 20px;
     width: 50%;
     margin: 0 auto;
@@ -631,7 +548,6 @@ body {
     }
 
     #start-game {
-        /* width: 100%; */
         margin: 0 auto;
         position:relative;
         top: 10px;
@@ -646,14 +562,13 @@ body {
 
     .rows-container {
         position: relative;
-        /* top: -40px; */
     }
 
     #toggle-button {
         margin-top: 80px;
         margin-bottom: 0;
         position: relative;
-        top: -70px;
+        top: -80px;
     }
 
     #game-area {
@@ -674,7 +589,6 @@ body {
         text-decoration: none;
         position: relative;
         top: -50px;
-    
         text-align: center;
     }
 
@@ -687,19 +601,14 @@ body {
 
     #game-over-text {
         top: -800px;
-        font-size: smaller;
+        font-size: smallest;
         line-height: 50px;
     }
-    
 
   }
 
-  /* @media only screen and (max-width: 1150px) {
-    #score {
-        font-size: 25px;
+  @media only screen and (max-width: 380px) {
+    #start-game {
+        left:-7px;
     }
-    
-    #timer {
-    font-size: 25px;
-    }
-  } */
+  }
