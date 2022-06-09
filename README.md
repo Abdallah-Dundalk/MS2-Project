@@ -1,108 +1,110 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# One Minute To Midnight:
+This website was created for casual gamers, and fans of puzzle games. The idea behind this project is to provide light entertainment in the form of a puzzle game that relies on speed and aptitude. The premise of the game simple. To win, match colour and direction indicated by buttons on screen by rotating rings before timer runs out. Users can use a tutorial to quickly learn how to play the game. The simplicity of the game combined with a combined with a very short timer balances intuitiveness with a reasonable amount of challenge.
 
-Welcome Abdallah-Dundalk,
+One Minute to Midnight
+![One Minute to Midnight]( (./assets/images/responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Existing Features Navigation Bar
 
-## Gitpod Reminders
+Given that the focus of this site is to play a game, the navigation is as basic as it gets. The landing page contains just one link, which brings the user to the game page. Likewise, on the game page, there is just one link bringing the user back to the landing page.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Landing Page:
+![One Minute to Midnight]( assets/images/landing-page.png)
 
-`python3 -m http.server`
+This section introduces the user to the theme of the game with a short paragraph setting the scene for the user. Further down the page are instructions on how to play the game. This is supplemented with a short video showing the game in motion.
 
-A blue button should appear to click: _Make Public_,
+![One Minute to Midnight]( assets/images/tutorial-video.png)
 
-Another blue button should appear to click: _Open Browser_.
+The layout of the game is simplistic, clear and colourful against a contrasting black background. The game consists of 9 buttons, each surrounded by one red ring and one blue ring and a toggle button used to select the different coloured rings that the player will need to rotate to match the colour and orientation of the button inside the rings.
+Across the top of the page, starting on the left-hand side is the points element where the players score is incremented. In the centre is the “start” button which is used to start the game and timer. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+On the right is a link to the Tutorial link that takes the user to a page explaining how to play the game. At the bottom of the page is a toggle button used to select the red or blue rings. 
 
-A blue button should appear to click: _Make Public_,
+On the bottom of the page is a toggle button used to select the red of blue rings, depending on the current colour of the toggle button.
 
-Another blue button should appear to click: _Open Browser_.
+Beneath the toggle button is the time which indicates how many seconds are left before the game ends. The game must be won before the 60-second timer runs out.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Navigation:
+There is only one navigation link on the top right-hand side of the landing page, which brings the user to the game page. On the game page, again there is one link, which reads “exit”, positioned on the top, right which brings the player back to the landing page.
+##Game Area:
+The button at the centre of the rings displays a colour and a direction. The direction and colour are assigned to each button randomly upon loading of the screen and when the start button is pressed. The goal of the game is to align the rings with the button’s direction. The ring that needs to be aligned to the button is dependent on the colour displayed by the button i.e. if the button is red, the red ring must be aligned, if the button is blue, the blue ring must be aligned. And if the button is purple, both the blue and red ring must be aligned. 
 
-To log into the Heroku toolbelt CLI:
+![One Minute to Midnight]( assets/images/game-area.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Start Button:
+This button is also used to reset the game by resetting the score and timer to zero and randomly assigning rotation and colour values to the buttons.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Toggle Button:
+At the bottom of the page is a toggle button used to select the red or blue rings. Press once to toggle selection of ring all rings matching the current colour of the toggle button. The selected ring will be indicated by changing from a grey red/ blue to a brighter white red/ blue.
 
-------
+## Timer:
+The time starts when the player presses the start button. The countdown starts at 60 seconds and reads 60 seconds until launch, 59 seconds until launch etc. When the timer runs out, the player is presented with a “game over” message. If the game is won before the timer runs out, the timer stops, and the player is presented with an alternative “game won” message.
+![One Minute to Midnight]( assets/images/game-over.png)
 
-## Release History
+## The Footer:
+A basic footer displaying copyright information.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Sound effects:
+A simple modern button click sound effect is played when the player presses any of the rings, or game buttons. The sound is pleasant and mild and fitting so as not to distract or irritate the player and indicates when a press has been initiated.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Features Left to Implement:
+-Button click animations for all buttons
+-Error sound effect when pressing ring that’s inactive.
+-Game rounds so high scores can be accumulated over several rounds of the game instead of game completion in one round.
+-Combination scoring rules so that the player is rewarded for aligning 3 rings withing 3 second etc.
+-Tweak sizing of elements to improve user experience on mobile.
+-Add audio messages to inform the user how many seconds remain at 10 second intervals for more dramatic effect.
+-Button to share scores on social media.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Testing:
+All links tested and functioning. All pages responsive and adjust well to different screen sizes all the way down to 320 px wide. 
+Toggle button tested and selects red rings when toggled from blue to red and visa versa. The start button has been tested and resets the timer, score, ring orientation and colour and direction of buttons as expected.
+The game over/ game won message displays when the timer runs out or the game has been won.
+The video on the tutorial page plays correctly.
+Both links tested and confirmed working. Chrome developer tools was used to ensure the sites pages looked good on various screen sizes all the way down to 320px wide. Many adjustments were made and tested to ensure elements displayed nicely. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Validator Testing:
+HTML 
+No errors were detected when all HTML code was tested using the official W3C validator.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+CSS 
+No errors were detected when all HTML code was tested using the official Jigsaw validator.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Jshint
+Issues detected by the validator, however none of the issues prevented the code from working as intended.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Unfixed Bugs 
+The dials were expected to rotate 360 degrees continuously in the same direction, however that is not the case. The rings reverse from 360 degrees to 90 degrees and this bug has yet to be fixed, however, this reverse in direction has its own charm and doesn’t hinder the game or user experience.
+## Deployment:
+The website was deployed using Github by using these steps:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+1. In the GitHub repository click the settings icon near the top of the page
+2. Select the "pages" in the left column
+3. Under the "source" heading, select "main" from the drop-down menu
+click "save"
+4. The link for the website will then be highlighted in green with a message displayed stating "your site is published"
+5. You can visit the site here - https://abdallah-dundalk.github.io/MS2-Project/
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Credits:
+### Code:
+www.w3schools.com was used to help with developing the JS code for changing styling values in the DOM.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Stackoverflow was used to help with developing rotating.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Code Institute README template was used for this REAME file.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- The button arrow icons are from Fontawesome.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- The ring neon light effect style is from css-tricks.com/how-to-create-neon-text-with-css/
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Images:
+- The Game over background image is from Pixabay.
+- The radioactive icon is from Fontawesome
+## Acknowledgements
+- Many thanks to the entire Code Institute Team for teaching me!
+- Thanks to my fellow Code Institute classmates for sharing their content and providing inspiration.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
