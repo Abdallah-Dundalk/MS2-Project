@@ -232,7 +232,7 @@ body {
     height: 90px;
     width: 90px;
     border-radius: 100px;
-    margin: 30px auto;
+    margin: 15px auto;
     color: black;
     background-color: blue;
     font-size: 16px;
@@ -271,13 +271,12 @@ body {
     background-image: url(../images/woman.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-filter: brightness(50%);
     filter:brightness(50%);
 }
 
 #game-over-text {
     margin: 0 auto;
-    font-size: large;
+    font-size: smaller;
     color:antiquewhite;
     font-weight: bolder;
     display: block;
@@ -287,7 +286,7 @@ body {
     transition-property: all;
     transition-duration: 1s;
     position: relative;
-    top: -1200px;
+    top: -1400px;
     line-height: 100px;
     word-break: break-all;
     position: relative;
@@ -494,7 +493,7 @@ video {
         }
 
         #toggle-button {
-            margin-top: 0;
+            margin-top: 15px;
             margin-bottom: 0;
             position: relative;
             top: -10px;
@@ -516,16 +515,18 @@ video {
 
   }
 
-
+  #bottom-left {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
   
-    
     #bottom-middle {
-        margin-top: 40px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
     
     #bottom-right {
-        margin-top: 40px;
+        margin-top: 15px;
         margin-bottom: 20px;
     } 
 
@@ -539,7 +540,7 @@ video {
     }
     
     #timer {
-    top: -1px;
+    top: -10px;
     font-size: 20px;
     width: 50%;
     margin: 0 auto;
@@ -596,12 +597,11 @@ video {
         top: -450px;
         background-position-y: center;
         background-position-x: center;
-        word-break: break-word;
     }
 
     #game-over-text {
         top: -800px;
-        font-size: smallest;
+        font-size: smaller;
         line-height: 50px;
     }
 
