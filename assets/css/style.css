@@ -5,6 +5,10 @@
     grid-template-rows: 100px 100px 100px;    
 }
 
+body {
+    background-color: white;
+}
+
 .rows-container > div {   
     width: 100%;
     place-items: center center;
@@ -12,7 +16,7 @@
 
 #score {
     height: 60px;
-    width: 20%;
+    width: 10%;
     display:block;
     float: left;
     margin: 0px 0px 0px 10%;
@@ -35,6 +39,7 @@
     line-height: 60px;
     color: antiquewhite;
     font-size: 60px;
+    position: absolute;
 }
 
 #page-2-link {
@@ -50,6 +55,7 @@
     font-size: 35px;
     text-decoration: none;
     position: relative;
+    z-index: 9;
     top: -50px;
 
     text-align: center;
@@ -81,12 +87,14 @@
     clear: both;
     z-index: -1;
     box-sizing: border-box;
+    
 }
 
 .dial {
     height: 80px;
     width: 80px;
     border-radius: 50%;
+    
 }
 
 
@@ -256,7 +264,7 @@
     overflow: hidden;
     line-height: 100px;
     word-break: break-all;
-    background-image: url(/assets/images/woman.jpg);
+    background-image: url(../images/woman.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-filter: brightness(50%);
@@ -329,7 +337,7 @@
 }
 
 body {
-    background-color: black;
+    /* background-color: black; */
 }
 
 #instructions {
@@ -461,7 +469,7 @@ body {
         }
 
         #start-game {
-            width: 100%;
+            /* width: 100%; */
             margin: 0 auto 30px;
             position:relative;
             top: 10px;
