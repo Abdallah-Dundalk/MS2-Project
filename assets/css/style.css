@@ -606,7 +606,7 @@ video {
     }
 
     video {
-        width: 300px;
+        width: 100%;
     }
     footer {
         height: 20px;
