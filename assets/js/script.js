@@ -1550,7 +1550,7 @@ function parentCountdown () {
 function gameOver () {
     let gameOver = document.getElementById("game-over");
     let gameOverText = document.getElementById("game-over-text");
-    gameOverText.innerHTML = `<h2>Missiles Launched</h2><h2>The AI has destroyed humanity</h2><h2>Game Over.</h2><h2>Press Start to play again.</h2>`;
+    gameOverText.innerHTML = `<h2>Missiles Launched...</h2><h2>The AI has won...</h2><h2>Game Over.</h2><h2>Press Start to play again.</h2>`;
     gameOver.style.width = "80%";
     gameOver.style.height = "600px";
     gameOverText.style.width = "80%";
