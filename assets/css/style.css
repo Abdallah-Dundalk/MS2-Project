@@ -119,10 +119,10 @@
     transition-property: all;
 }
 
-/* .center-ring:hover {
+.center-ring:hover {
     transition-duration: 500ms;
     transition-property: all;
-} */
+}
 
 .middle-ring {
     border: 2px solid white;

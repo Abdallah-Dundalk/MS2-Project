@@ -1558,10 +1558,13 @@ function gameOver () {
 }
 
 function winRound () {
-    let winRound = document.getElementById("game-over");
-    winRound.innerText = "Launch sequence disabled!... you have saved the human race!... Press Start to play again!";
-    winRound.style.width = "80%";
-    winRound.style.height = "600px";
+    let gameOver = document.getElementById("game-over");
+    let gameOverText = document.getElementById("game-over-text");
+    gameOverText.innerHTML = `<h2>Launch Sequence Disabled...</h2><h2>You have defeated the AI...</h2><h2>Humanity will survive...</h2><h2>Press Start to play again.</h2>`;
+    gameOver.style.width = "80%";
+    gameOver.style.height = "600px";
+    gameOverText.style.width = "80%";
+    gameOverText.style.height = "600px";
 }
 
 
@@ -2239,12 +2242,12 @@ function toggleSoundsTopLeftInnerDial () {
     }
 }
 
-function centerButtonMouseDown() {
-    let centerButton = document.getElementById("top-left-center-dial");
-    centerButton.style.transform = "translateY(1px)";
-}
+// function centerButtonMouseDown() {
+//     let centerButton = document.getElementById("top-left-center-dial");
+//     centerButton.style.transform = "translateY(1px)";
+// }
 
-function topLeftCenterMouseUp() {
-    let centerButton = document.getElementById("top-left-center-dial");
-    centerButton.style.transform = "translateY(-2px)";
-}
+// function topLeftCenterMouseUp() {
+//     let centerButton = document.getElementById("top-left-center-dial");
+//     centerButton.style.transform = "translateY(-2px)";
+// }
